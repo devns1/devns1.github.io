@@ -1,0 +1,275 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGet - Ultimate Video Downloader for Android</title>
+    <meta name="description" content="VGet is your ultimate tool for downloading videos from virtually anywhere on the internet, right to your Android device. Save and watch offline!">
+    <meta name="keywords" content="video downloader, download video, video saver, offline video, social media downloader, Instagram downloader, Twitter downloader, Facebook downloader, Kwai downloader, save video, all video downloader, free video downloader, media downloader, clip saver">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --background-color: #121212;
+            --surface-color: #1e1e1e;
+            --primary-color: #9333ea; /* Purple-600 from Tailwind */
+            --primary-hover-color: #a855f7; /* Purple-500 */
+            --text-primary: #f9fafb; /* Gray-50 */
+            --text-secondary: #d1d5db; /* Gray-300 */
+            --border-color: #374151; /* Gray-700 */
+        }
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: var(--background-color);
+            color: var(--text-primary);
+            line-height: 1.7;
+        }
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        header {
+            background-color: var(--surface-color);
+            text-align: center;
+            padding: 100px 20px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        header h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+            color: var(--text-primary);
+        }
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            margin-bottom: 30px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .download-button {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 15px 35px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 50px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            display: inline-block;
+        }
+        .download-button:hover {
+            background-color: var(--primary-hover-color);
+            transform: translateY(-3px);
+        }
+        section {
+            padding: 80px 0;
+        }
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 50px;
+            position: relative;
+        }
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background-color: var(--primary-color);
+            border-radius: 2px;
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+        .feature-card {
+            background-color: var(--surface-color);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(147, 51, 234, 0.1);
+        }
+        .feature-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+        .how-it-works-content {
+            display: flex;
+            gap: 40px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .how-it-works-step {
+            flex: 1;
+            min-width: 280px;
+        }
+        .how-it-works-step h3 {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+        .screenshot {
+            border-radius: 12px;
+            width: 100%;
+            max-width: 300px;
+            border: 2px solid var(--border-color);
+            margin: 0 auto;
+            display: block;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        .gallery-img {
+            width: 100%;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease;
+        }
+        .gallery-img:hover {
+            transform: scale(1.05);
+        }
+        .long-description {
+            background-color: var(--surface-color);
+            padding: 50px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            margin-top: 60px;
+            border-top: 1px solid var(--border-color);
+        }
+        footer p {
+            color: var(--text-secondary);
+        }
+        @media (max-width: 768px) {
+            header h1 { font-size: 2.8rem; }
+            .section-title { font-size: 2rem; }
+            .how-it-works-content { flex-direction: column; }
+            .screenshot { max-width: 250px; margin-bottom: 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>VGet Video Downloader</h1>
+            <p>Your ultimate tool for downloading videos from virtually anywhere on the internet, right to your Android device.</p>
+            <a href="https://www.mediafire.com/file/aiowt4x5dbtbre9/app-release.apk/file" class="download-button">Download for Android</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="features">
+            <div class="container">
+                <h2 class="section-title">Why Choose VGet?</h2>
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <h3>Massive Compatibility</h3>
+                        <p>Download videos from thousands of websites and social media platforms like Instagram, X (Twitter), Facebook, Kwai, and more.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Simple to Use</h3>
+                        <p>Just share a video link or copy-paste it into the app. The download starts automatically. No account or login required.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Watch Offline</h3>
+                        <p>Save videos directly to your device's local storage and watch all your saved videos offline, anytime, anywhere.</p>
+                    </div>
+                     <div class="feature-card">
+                        <h3>Download Manager</h3>
+                        <p>Manage your active and completed downloads in a clean, simple list.</p>
+                    </div>
+                    <div class="feature-card">
+                        <h3>Efficient & Fast</h3>
+                        <p>Experience fast, reliable, and efficient background downloading without slowing down your device.</p>
+                    </div>
+                     <div class="feature-card">
+                        <h3>Completely Free</h3>
+                        <p>Enjoy all the premium features of a video downloader at no cost. VGet is free to download and use.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="how-it-works" style="background-color: var(--surface-color);">
+            <div class="container">
+                <h2 class="section-title">Incredibly Simple to Use</h2>
+                <div class="how-it-works-content">
+                    <div class="how-it-works-step">
+                        <h3>1. Share to VGet</h3>
+                        <p>While browsing apps like Instagram, X, or Facebook, just use the "Share" function on a video and pick VGet from the list. The download will start automatically.</p>
+                    </div>
+                    <img src="img/vget-main.png" alt="VGet main screen" class="screenshot">
+                </div>
+                <div class="how-it-works-content" style="margin-top: 40px;">
+                     <img src="img/vget-how-to-1.png" alt="Pasting a link in VGet" class="screenshot">
+                    <div class="how-it-works-step">
+                        <h3>2. Paste the Link</h3>
+                        <p>Copy a video's link from any site or platform, open VGet, and paste it in. We'll take care of the rest!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="about">
+            <div class="container">
+                 <h2 class="section-title">Set Your Content Free</h2>
+                 <div class="long-description">
+                    <p>Unlock the full potential of your media experience with VGet, the ultimate video downloader for Android. VGet provides a powerful and incredibly easy way to save videos from your favorite platforms directly to your device, allowing you to watch them offline, anytime, anywhere.</p>
+                    <br>
+                    <p>Our robust and sophisticated download engine is what truly sets VGet apart. It is designed to be compatible with thousands of websites and online video platforms from all over the internet. This massive compatibility means you can save content from almost anywhere. Supported platforms include, but are not limited to: Instagram, X (formerly Twitter), Facebook, Kwai, TikTok, Vimeo, Dailymotion and thousands more! With VGet, you are no longer limited to just one or two services. If there's a video you want to save, chances are VGet can download it.</p>
+                 </div>
+            </div>
+        </section>
+
+        <section id="gallery">
+            <div class="container">
+                <h2 class="section-title">App Screenshots</h2>
+                <div class="gallery-grid">
+                    <img src="img/vget-main.png" alt="VGet main download screen" class="gallery-img">
+                    <img src="img/vget-downloads.png" alt="VGet downloads list screen" class="gallery-img">
+                    <img src="img/vget-how-to-1.png" alt="VGet with pasted link" class="gallery-img">
+                    <img src="img/vget-how-to-2.png" alt="VGet language selection" class="gallery-img">
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>Copyright &copy; 2024 devns1.github.io - All Rights Reserved.</p>
+            <p>Download VGet and start building your offline video library today!</p>
+            <br>
+             <a href="https://www.mediafire.com/file/aiowt4x5dbtbre9/app-release.apk/file" class="download-button">Download VGet APK</a>
+        </div>
+    </footer>
+
+</body>
+</html>
