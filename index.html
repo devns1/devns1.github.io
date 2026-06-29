@@ -1,1 +1,116 @@
-teste
+html_content = """<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background-color: #f9f9f9;
+        }
+        .container {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e1e4e8;
+        }
+        h1 {
+            font-size: 28px;
+            color: #111;
+            margin-bottom: 20px;
+            border-bottom: 2px solid #eaecef;
+            padding-bottom: 10px;
+        }
+        h3 {
+            font-size: 18px;
+            color: #222;
+            margin-top: 30px;
+            margin-bottom: 15px;
+        }
+        p, ul {
+            font-size: 15px;
+            color: #444;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        a {
+            color: #0366d6;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            margin-top: 40px;
+            font-size: 13px;
+            color: #666;
+            text-align: center;
+            border-top: 1px solid #eaecef;
+            padding-top: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Privacy Policy</h1>
+    
+    <p>This privacy policy applies to all mobile applications developed and published by <strong>[Your Developer Name or Company Name]</strong> (hereinafter referred to as "Service Provider") on the Google Play Store, including but not limited to <strong>XAUUSD SIGNALS</strong>, <strong>NAS100 Index Signals</strong>, <strong>SignalFX - Forex Signals</strong>, <strong>CalmWave</strong>, and <strong>NetMapper - Scanner de IP</strong>.</p>
+    
+    <p>This service is provided at no cost and is intended for use as is.</p>
+
+    <h3>1. Information Collection and Use</h3>
+    <p>Our applications do not require a personal account or registration to function. However, the applications utilize third-party services that may collect information used to identify you, optimize app performance, and serve advertisements.</p>
+    <p>The data collected by third-party providers may include:</p>
+    <ul>
+        <li>Device advertising identifiers (such as Google Advertising ID).</li>
+        <li>Approximate location data (IP address, network country).</li>
+        <li>App performance data, system logs, and crash reports.</li>
+    </ul>
+
+    <h3>2. Third-Party Services and Advertisements</h3>
+    <p>We use <strong>Google AdMob</strong> as our primary third-party advertising service provider. Google AdMob uses tracking technologies, cookies, or unique mobile identifiers to serve personalized and non-personalized ads based on your interests and prior visits to these applications or other sites on the internet.</p>
+    <ul>
+        <li>You can opt out of personalized advertising by visiting your Android device's Google Ads settings.</li>
+        <li>To understand how Google manages and processes data within its advertising ecosystem, please review the <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener noreferrer">Google Privacy & Terms</a>.</li>
+    </ul>
+
+    <h3>3. General Data Protection Regulation (GDPR) & Privacy Compliance</h3>
+    <p>In compliance with international data privacy regulations (such as the GDPR in the European Economic Area and UK, and the LGPD in Brazil):</p>
+    <ul>
+        <li>We implement a Google-certified Consent Management Platform (CMP) to request explicit consent before serving personalized advertisements or tracking users in applicable regions.</li>
+        <li>Users have the right to modify, review, or revoke their privacy consent choices at any time through the privacy settings menu available inside each application.</li>
+    </ul>
+
+    <h3>4. Security</h3>
+    <p>We value your trust in using our services. Please be aware that while we strive to ensure our applications operate securely, no method of transmission over the internet, or method of electronic storage, is 100% secure and reliable, and we cannot guarantee its absolute security.</p>
+
+    <h3>5. Changes to This Privacy Policy</h3>
+    <p>We may update our Privacy Policy from time to time. You are advised to review this page periodically for any changes. We will notify you of any updates by posting the new Privacy Policy on this page.</p>
+
+    <h3>6. Contact Us</h3>
+    <p>If you have any questions or suggestions about our Privacy Policy, do not hesitate to contact us at: <strong>[Your Support Email Address]</strong>.</p>
+
+    <div class="footer">
+        This policy is effective as of June 2026.
+    </div>
+</div>
+
+</body>
+</html>
+"""
+
+with open("privacy_policy.html", "w", encoding="utf-8") as f:
+    f.write(html_content)
+print("File successfully created.")
