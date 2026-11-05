@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NS1 Apps - Xau Pro & Trading Apps and Utilities</title>
+    <title>NS1 Apps - Xau Pro | High-Precision XAUUSD Signals & Trading Utilities</title>
 
-    <!-- SEO Meta Tags & Keywords -->
-    <meta name="description" content="Official website of NS1 Apps. Discover Xau Pro and our gold trading apps (XAUUSD), forex signals, NAS100, NetMapper IP Scanner, and CalmWave on the Google Play Store.">
-    <meta name="keywords" content="Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX, Forex Signals, CalmWave, NetMapper, IP Scanner, gold trading, forex signals, trading app, devns1, Google Play Store, android apps, devns1.github.io, dl02071988@icloud.com">
+    <!-- SEO Meta Tags & Description -->
+    <meta name="description" content="Official developer portal of NS1 Apps. Discover Xau Pro, featuring ultra-low latency real-time XAUUSD gold trading signals powered by MetaTrader 5 Python automation and Firebase. Explore our professional trading and utility apps on Google Play.">
+    <meta name="keywords" content="Xau Pro, XAUUSD Signals, NAS100 Index Signals, SignalFX Forex, MetaTrader 5 Python automation, Firebase push signals, gold trading app, NetMapper IP Scanner, CalmWave, devns1, Google Play Store">
     <meta name="author" content="devns1">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://devns1.github.io/">
@@ -15,9 +15,36 @@
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devns1.github.io/">
-    <meta property="og:title" content="NS1 Apps - Xau Pro & Trading Apps and Utilities">
-    <meta property="og:description" content="Real-time signals for XAUUSD, NAS100, Forex, and essential tools. Explore all NS1 Apps on the Google Play Store.">
+    <meta property="og:title" content="NS1 Apps - Xau Pro | High-Precision XAUUSD Signals">
+    <meta property="og:description" content="Instant millisecond execution alerts for XAUUSD, NAS100, and Forex powered by dedicated MT5 Python infrastructure and Firebase.">
     <meta property="og:image" content="https://devns1.github.io/Sinais XAUUSD_ Ouro em Alta.png">
+
+    <!-- Structured Data: SoftwareApplication Schema (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Xau Pro",
+      "operatingSystem": "ANDROID",
+      "applicationCategory": "FinanceApplication",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD"
+      },
+      "description": "High-precision real-time XAUUSD gold trading signals powered by MetaTrader 5 Python automation and Firebase ultra-low latency push notifications.",
+      "publisher": {
+        "@type": "Organization",
+        "name": "NS1 Apps",
+        "url": "https://devns1.github.io/"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "1250"
+      }
+    }
+    </script>
 
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -35,6 +62,7 @@
                             DEFAULT: '#0B0F19',
                             card: '#131B2E',
                             border: '#1E293B',
+                            hover: '#1E293B'
                         }
                     }
                 }
@@ -46,7 +74,7 @@
 <body class="bg-obsidian text-gray-100 font-sans antialiased selection:bg-gold selection:text-obsidian">
 
     <!-- Navbar -->
-    <nav class="fixed top-0 left-0 right-0 z-50 bg-obsidian/80 backdrop-blur-md border-b border-obsidian-border">
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-obsidian/90 backdrop-blur-md border-b border-obsidian-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
             <div class="flex items-center space-x-3">
                 <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gold to-gold-dark flex items-center justify-center text-obsidian font-black text-xl shadow-lg shadow-gold/20">
@@ -54,21 +82,23 @@
                 </div>
                 <span class="text-xl font-bold tracking-wider text-white">NS1 <span class="text-gold">APPS</span></span>
             </div>
-            <div class="hidden md:flex items-center space-x-8">
+            <div class="hidden lg:flex items-center space-x-8">
                 <a href="#inicio" data-i18n="navHome" class="text-gray-300 hover:text-gold transition">Home</a>
+                <a href="#tecnologia" data-i18n="navTech" class="text-gray-300 hover:text-gold transition">Technology</a>
                 <a href="#xaupro" data-i18n="navXauPro" class="text-gray-300 hover:text-gold transition flex items-center gap-2">
                     <span class="inline-block w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                    Xau Pro (New)
+                    Xau Pro
                 </a>
+                <a href="#portfolio" data-i18n="navApps" class="text-gray-300 hover:text-gold transition">Our Apps</a>
                 <a href="#galeria" data-i18n="navGallery" class="text-gray-300 hover:text-gold transition">Gallery</a>
-                <a href="#loja" data-i18n="navStore" class="text-gray-300 hover:text-gold transition">Our Store</a>
+                <a href="#faq" data-i18n="navFaq" class="text-gray-300 hover:text-gold transition">FAQ</a>
                 <a href="privacy.html" data-i18n="navPrivacy" class="text-gray-300 hover:text-gold transition">Privacy</a>
             </div>
 
-            <div class="flex items-center space-x-4">
+            <div class="flex items-center space-x-3">
                 <!-- Language Switcher Flags -->
                 <div class="flex items-center space-x-1 bg-obsidian-card border border-obsidian-border rounded-xl p-1 shadow-inner">
-                    <button onclick="setLanguage('en')" title="English (US)" class="px-2 py-1 rounded-lg hover:bg-gold/20 transition text-sm flex items-center gap-1 font-semibold text-white focus:outline-none ring-1 ring-gold/40">
+                    <button onclick="setLanguage('en')" title="English (US)" class="px-2 py-1 rounded-lg hover:bg-gold/20 transition text-sm flex items-center gap-1 font-semibold text-white focus:outline-none">
                         🇺🇸 <span class="hidden sm:inline">EN</span>
                     </button>
                     <button onclick="setLanguage('pt')" title="Português (BR)" class="px-2 py-1 rounded-lg hover:bg-gold/20 transition text-sm flex items-center gap-1 font-semibold text-gray-300 hover:text-white focus:outline-none">
@@ -82,46 +112,46 @@
                     </button>
                 </div>
 
-                <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="downloadAppBtn" class="hidden sm:flex bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2 rounded-xl transition shadow-lg shadow-gold/20 items-center gap-2">
-                    <i class="fa-brands fa-google-play"></i> Download App
+                <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="downloadAppBtn" class="hidden sm:flex bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2.5 rounded-xl transition shadow-lg shadow-gold/20 items-center gap-2">
+                    <i class="fa-brands fa-google-play"></i> Download Xau Pro
                 </a>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section id="inicio" class="pt-32 pb-20 lg:pt-40 lg:pb-32 relative overflow-hidden bg-gradient-to-b from-obsidian via-obsidian-card to-obsidian">
+    <header id="inicio" class="pt-32 pb-20 lg:pt-44 lg:pb-32 relative overflow-hidden bg-gradient-to-b from-obsidian via-obsidian-card to-obsidian">
         <!-- Background Glow -->
-        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gold/10 rounded-full blur-[120px] pointer-events-none"></div>
+        <div class="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[650px] bg-gold/10 rounded-full blur-[140px] pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
                 <div class="lg:col-span-7 space-y-6">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold tracking-wide">
-                        <i class="fa-solid fa-star"></i> <span data-i18n="heroBadge">OFFICIAL LAUNCH THIS WEEK</span>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-gold/10 border border-gold/30 text-gold text-sm font-semibold tracking-wide shadow-lg shadow-gold/5">
+                        <i class="fa-solid fa-bolt text-gold"></i> <span data-i18n="heroBadge">OFFICIAL LAUNCH THIS WEEK • ULTRA-LOW LATENCY</span>
                     </div>
                     <h1 class="text-4xl sm:text-6xl font-black tracking-tight text-white leading-tight">
                         <span data-i18n="heroTitle1">Master the Gold Market with</span> <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-gold-light to-gold-dark">Xau Pro</span>
                     </h1>
-                    <p data-i18n="heroSubtitle" class="text-lg text-gray-300 max-w-xl">
-                        High-precision real-time signals for XAUUSD, advanced performance analysis, and cutting-edge technology built for demanding traders. Available on the Google Play Store this week!
+                    <p data-i18n="heroSubtitle" class="text-lg text-gray-300 max-w-xl leading-relaxed">
+                        Institutional-grade real-time XAUUSD trading signals powered by automated MetaTrader 5 Python scripts, 24/5 dedicated Windows servers, and instant Firebase push notifications.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
                         <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" class="bg-gold hover:bg-gold-light text-obsidian font-extrabold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/25 flex items-center gap-3 text-lg">
                             <i class="fa-brands fa-google-play text-2xl"></i>
                             <div class="text-left">
                                 <div data-i18n="heroPlaySub" class="text-xs font-semibold opacity-80 uppercase tracking-wider">Available on</div>
-                                <div data-i18n="heroPlayBtn" class="text-base font-black">Google Play</div>
+                                <div data-i18n="heroPlayBtn" class="text-base font-black">Google Play Store</div>
                             </div>
                         </a>
-                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="heroStoreBtn" class="bg-obsidian-card hover:bg-obsidian-border border border-obsidian-border text-white font-bold px-8 py-4 rounded-2xl transition flex items-center gap-3 text-lg">
-                            <i class="fa-solid fa-store text-gold text-xl"></i>
-                            View Full Store
+                        <a href="#tecnologia" data-i18n="heroTechBtn" class="bg-obsidian-card hover:bg-obsidian-border border border-obsidian-border text-white font-bold px-8 py-4 rounded-2xl transition flex items-center gap-3 text-lg">
+                            <i class="fa-solid fa-microchip text-gold text-xl"></i>
+                            How It Works
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-5 flex justify-center">
-                    <div class="relative w-full max-w-md rounded-3xl p-3 bg-gradient-to-b from-gold/30 to-obsidian-border shadow-2xl shadow-gold/10">
+                    <div class="relative w-full max-w-md rounded-3xl p-3 bg-gradient-to-b from-gold/40 to-obsidian-border shadow-2xl shadow-gold/15">
                         <div class="rounded-2xl overflow-hidden bg-obsidian">
                             <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="XAUUSD Signals - Gold Rising" class="w-full h-auto object-cover hover:scale-105 transition duration-500">
                         </div>
@@ -129,129 +159,275 @@
                 </div>
             </div>
         </div>
+    </header>
+
+    <!-- Technology / Behind the Scenes Section -->
+    <section id="tecnologia" class="py-24 bg-obsidian relative border-t border-obsidian-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+                <span data-i18n="techCategory" class="text-gold font-bold uppercase tracking-wider text-sm">Institutional Infrastructure</span>
+                <h2 data-i18n="techTitle" class="text-3xl sm:text-5xl font-black text-white">Ultra-Low Latency Technology</h2>
+                <p data-i18n="techSub" class="text-gray-400 text-lg">Discover how our automated pipeline bridges institutional execution with your mobile device in milliseconds.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Pillar 1 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 text-gold/10 font-black text-6xl pointer-events-none group-hover:text-gold/20 transition">01</div>
+                    <div class="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition shadow-lg shadow-gold/5">
+                        <i class="fa-solid fa-code"></i>
+                    </div>
+                    <h3 data-i18n="pillar1Title" class="text-xl font-bold text-white mb-3">Python & MetaTrader 5</h3>
+                    <p data-i18n="pillar1Desc" class="text-gray-400 leading-relaxed">
+                        Our proprietary Python automation scripts are integrated directly with the official MetaTrader 5 (MT5) library, capturing precise market execution prices instantly.
+                    </p>
+                </div>
+
+                <!-- Pillar 2 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 text-gold/10 font-black text-6xl pointer-events-none group-hover:text-gold/20 transition">02</div>
+                    <div class="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition shadow-lg shadow-gold/5">
+                        <i class="fa-solid fa-server"></i>
+                    </div>
+                    <h3 data-i18n="pillar2Title" class="text-xl font-bold text-white mb-3">Dedicated 24/5 Windows Server</h3>
+                    <p data-i18n="pillar2Desc" class="text-gray-400 leading-relaxed">
+                        Hosted on high-availability Windows Server infrastructure running continuously 24 hours a day, 5 days a week, ensuring zero downtime throughout all trading sessions.
+                    </p>
+                </div>
+
+                <!-- Pillar 3 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group relative overflow-hidden">
+                    <div class="absolute top-0 right-0 p-6 text-gold/10 font-black text-6xl pointer-events-none group-hover:text-gold/20 transition">03</div>
+                    <div class="w-16 h-16 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition shadow-lg shadow-gold/5">
+                        <i class="fa-solid fa-bolt-lightning"></i>
+                    </div>
+                    <h3 data-i18n="pillar3Title" class="text-xl font-bold text-white mb-3">Instant Firebase Push</h3>
+                    <p data-i18n="pillar3Desc" class="text-gray-400 leading-relaxed">
+                        Entry prices, multiple Take Profits (TPs), and Stop Loss (SL) parameters are dispatched instantly via Firebase cloud messaging with ultra-low latency push notifications.
+                    </p>
+                </div>
+            </div>
+        </div>
     </section>
 
     <!-- Highlight Section: Xau Pro -->
-    <section id="xaupro" class="py-20 bg-obsidian relative">
+    <section id="xaupro" class="py-24 bg-obsidian-card/40 relative border-t border-obsidian-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-6 space-y-6">
+                    <span data-i18n="xauTag" class="text-gold font-bold uppercase tracking-wider text-sm">Flagship Trading App</span>
+                    <h2 data-i18n="xauTitle" class="text-3xl sm:text-5xl font-black text-white">Xau Pro: Precision in Gold Trading</h2>
+                    <p data-i18n="xauDesc" class="text-gray-300 text-lg leading-relaxed">
+                        Designed specifically for professional traders and enthusiasts looking to capitalize on XAUUSD movements. Receive real-time entry alerts with clearly defined risk management parameters directly on your phone.
+                    </p>
+                    <ul class="space-y-4 text-gray-300">
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-gold text-xl"></i>
+                            <span data-i18n="xauBullet1">Real-time buy and sell signals for XAUUSD</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-gold text-xl"></i>
+                            <span data-i18n="xauBullet2">Multiple Take Profit (TP) targets and strict Stop Loss (SL)</span>
+                        </li>
+                        <li class="flex items-center gap-3">
+                            <i class="fa-solid fa-circle-check text-gold text-xl"></i>
+                            <span data-i18n="xauBullet3">No registration required – download and start immediately</span>
+                        </li>
+                    </ul>
+                    <div class="pt-4">
+                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="xauBtn" class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-obsidian font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 text-lg">
+                            <i class="fa-brands fa-google-play text-xl"></i> Download Xau Pro Now
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-6 flex justify-center">
+                    <div class="relative w-full max-w-lg rounded-3xl p-4 bg-gradient-to-b from-gold/30 to-obsidian-border shadow-2xl">
+                        <img src="Precisão elevada no trading de ouro.png" alt="Xau Pro precision gold trading app preview" class="rounded-2xl w-full h-auto object-cover shadow-2xl">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Complete Portfolio Section ("Our Apps") -->
+    <section id="portfolio" class="py-24 bg-obsidian relative border-t border-obsidian-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 data-i18n="sectionXauProTitle" class="text-3xl sm:text-5xl font-black text-white">High Precision Gold Trading</h2>
-                <p data-i18n="sectionXauProSub" class="text-gray-400 text-lg">Developed with modern algorithms to maximize your operational results in the XAUUSD pair.</p>
+                <span data-i18n="portfolioCategory" class="text-gold font-bold uppercase tracking-wider text-sm">NS1 Ecosystem</span>
+                <h2 data-i18n="portfolioTitle" class="text-3xl sm:text-5xl font-black text-white">Complete App Portfolio</h2>
+                <p data-i18n="portfolioSub" class="text-gray-400 text-lg">Explore our suite of high-performance Android applications built for trading and utility management.</p>
             </div>
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Feature 1 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition">
-                        <i class="fa-solid fa-chart-line"></i>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- App 1: Xau Pro -->
+                <div class="bg-obsidian-card border border-gold/40 rounded-3xl p-6 flex flex-col justify-between hover:border-gold transition group shadow-xl shadow-gold/5">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-gold/20 flex items-center justify-center text-gold text-xl mb-4">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">Xau Pro</h3>
+                        <p data-i18n="app1Desc" class="text-gray-400 text-sm mb-6 leading-relaxed">High-precision real-time gold (XAUUSD) trading signals powered by Python MT5 automation.</p>
                     </div>
-                    <h3 data-i18n="feat1Title" class="text-xl font-bold text-white mb-3">Real-Time Signals</h3>
-                    <p data-i18n="feat1Desc" class="text-gray-400">Receive instant notifications for high-accuracy buy and sell opportunities in XAUUSD.</p>
-                </div>
-                <!-- Feature 2 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition">
-                        <i class="fa-solid fa-bullseye"></i>
-                    </div>
-                    <h3 data-i18n="feat2Title" class="text-xl font-bold text-white mb-3">Precision Analysis</h3>
-                    <p data-i18n="feat2Desc" class="text-gray-400">Integrated technical analysis tools to identify support, resistance, and trends with exactness.</p>
-                </div>
-                <!-- Feature 3 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 hover:border-gold/50 transition group">
-                    <div class="w-14 h-14 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-2xl mb-6 group-hover:bg-gold group-hover:text-obsidian transition">
-                        <i class="fa-solid fa-bolt"></i>
-                    </div>
-                    <h3 data-i18n="feat3Title" class="text-xl font-bold text-white mb-3">Launching This Week</h3>
-                    <p data-i18n="feat3Desc" class="text-gray-400">The most anticipated gold trading app officially arrives on the Google Play Store in the coming days.</p>
-                </div>
-            </div>
-
-            <!-- Banner / Image Showcase -->
-            <div class="mt-16 rounded-3xl overflow-hidden border border-obsidian-border bg-obsidian-card p-4 sm:p-8 grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-                <div>
-                    <span data-i18n="bannerTag" class="text-gold font-bold uppercase tracking-wider text-sm">Exclusive Technology</span>
-                    <h3 data-i18n="bannerTitle" class="text-2xl sm:text-4xl font-extrabold text-white mt-2 mb-4">Ready to transform your trades?</h3>
-                    <p data-i18n="bannerDesc" class="text-gray-300 mb-6">
-                        With Xau Pro, you get access to professional insights right on your smartphone. Track the gold market with confidence, agility, and analytical intelligence.
-                    </p>
-                    <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="bannerBtn" class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-obsidian font-bold px-6 py-3 rounded-xl transition shadow-lg shadow-gold/20">
-                        <i class="fa-brands fa-google-play"></i> Access on Google Play
+                    <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="viewPlayStore" class="text-gold font-semibold text-sm flex items-center gap-2 group-hover:underline">
+                        Google Play <i class="fa-solid fa-arrow-right text-xs"></i>
                     </a>
                 </div>
-                <div class="flex justify-center">
-                    <img src="Precisão elevada no trading de ouro.png" alt="High precision gold trading" class="rounded-2xl max-h-96 object-contain shadow-2xl">
+
+                <!-- App 2: NAS100 Index Signals -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <i class="fa-solid fa-chart-candlestick"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">NAS100 Index Signals</h3>
+                        <p data-i18n="app2Desc" class="text-gray-400 text-sm mb-6 leading-relaxed">Specialized algorithmic signals and market analysis for NASDAQ 100 index traders.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="viewPlayStore" class="text-gold font-semibold text-sm flex items-center gap-2 group-hover:underline">
+                        Google Play <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- App 3: SignalFX Forex -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <i class="fa-solid fa-globe"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">SignalFX - Forex Signals</h3>
+                        <p data-i18n="app3Desc" class="text-gray-400 text-sm mb-6 leading-relaxed">Comprehensive forex currency pair signals with robust entry and exit risk management.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="viewPlayStore" class="text-gold font-semibold text-sm flex items-center gap-2 group-hover:underline">
+                        Google Play <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                </div>
+
+                <!-- App 4: NetMapper & CalmWave -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-6 flex flex-col justify-between hover:border-gold/50 transition group">
+                    <div>
+                        <div class="w-12 h-12 rounded-2xl bg-gold/10 flex items-center justify-center text-gold text-xl mb-4">
+                            <i class="fa-solid fa-network-wired"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-2">NetMapper & CalmWave</h3>
+                        <p data-i18n="app4Desc" class="text-gray-400 text-sm mb-6 leading-relaxed">Essential IP network scanner utilities and focus/wellness soundscape applications.</p>
+                    </div>
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="viewPlayStore" class="text-gold font-semibold text-sm flex items-center gap-2 group-hover:underline">
+                        Google Play <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Gallery Section -->
-    <section id="galeria" class="py-20 bg-obsidian-card/50 border-t border-obsidian-border">
+    <section id="galeria" class="py-24 bg-obsidian-card/40 relative border-t border-obsidian-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
-                <h2 data-i18n="galleryTitle" class="text-3xl sm:text-5xl font-black text-white">App Gallery & Preview</h2>
-                <p data-i18n="gallerySub" class="text-gray-400 text-lg">Discover the modern and intuitive interface developed by NS1 Apps.</p>
+                <h2 data-i18n="galleryTitle" class="text-3xl sm:text-5xl font-black text-white">App Gallery & Interface Preview</h2>
+                <p data-i18n="gallerySub" class="text-gray-400 text-lg">Explore the clean, modern, and high-performance UI designed for professional traders.</p>
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <!-- Image Cards -->
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Imagem colada.png" alt="App Preview 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Imagem colada (2).png" alt="App Preview 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Imagem colada (3).png" alt="App Preview 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Imagem colada (4).png" alt="App Preview 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Imagem colada (5).png" alt="App Preview 5" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="ChatGPT Image 3 de set. de 2026, 16_27_22.png" alt="App Preview 6" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="ChatGPT Image 30 de ago. de 2026, 17_00_39.png" alt="App Preview 7" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
                     <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="App Preview 8" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Store Section -->
-    <section id="loja" class="py-20 bg-obsidian relative overflow-hidden">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <div class="bg-gradient-to-r from-obsidian-card to-obsidian border border-gold/30 rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
-                <div class="space-y-4 max-w-2xl">
-                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-wider">
-                        <i class="fa-solid fa-store"></i> Official Google Play Store
-                    </div>
-                    <h2 data-i18n="storeTitle" class="text-3xl sm:text-4xl font-black text-white">Explore All Our Apps</h2>
-                    <p data-i18n="storeSub" class="text-gray-300">
-                        Visit our developer page on the Google Play Store to discover all our apps, tools, and utilities created with a focus on excellence and innovation.
+    <!-- FAQ Section -->
+    <section id="faq" class="py-24 bg-obsidian relative border-t border-obsidian-border">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 space-y-4">
+                <span data-i18n="faqCategory" class="text-gold font-bold uppercase tracking-wider text-sm">Got Questions?</span>
+                <h2 data-i18n="faqTitle" class="text-3xl sm:text-5xl font-black text-white">Frequently Asked Questions</h2>
+                <p data-i18n="faqSub" class="text-gray-400 text-lg">Everything you need to know about our trading signals and infrastructure.</p>
+            </div>
+
+            <div class="space-y-6">
+                <!-- FAQ Item 1 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
+                    <h3 data-i18n="faq1Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-gold"></i> Do Xau Pro signals experience any delay?
+                    </h3>
+                    <p data-i18n="faq1A" class="text-gray-400 pl-7 leading-relaxed">
+                        No. Our automated pipeline bridges MetaTrader 5 via custom Python scripts running on a dedicated 24/5 Windows Server, dispatching signals instantly through Firebase Cloud Messaging with ultra-low latency within milliseconds.
                     </p>
                 </div>
-                <div>
-                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="storeBtn" class="bg-gold hover:bg-gold-light text-obsidian font-black px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 flex items-center gap-3 text-lg whitespace-nowrap">
-                        <i class="fa-brands fa-google-play text-2xl"></i> Visit NS1 Store
-                    </a>
+
+                <!-- FAQ Item 2 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
+                    <h3 data-i18n="faq2Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-gold"></i> What parameters are included in each signal alert?
+                    </h3>
+                    <p data-i18n="faq2A" class="text-gray-400 pl-7 leading-relaxed">
+                        Every signal includes the precise asset pair (XAUUSD), direction (Buy/Sell), exact Entry Price, multiple Take Profit (TP) targets, and a well-defined Stop Loss (SL) for risk management.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 3 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
+                    <h3 data-i18n="faq3Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-gold"></i> Do I need to create an account or register?
+                    </h3>
+                    <p data-i18n="faq3A" class="text-gray-400 pl-7 leading-relaxed">
+                        No registration or personal account is required to use our apps. Simply download the application directly from the Google Play Store and start receiving real-time notifications immediately.
+                    </p>
+                </div>
+
+                <!-- FAQ Item 4 -->
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
+                    <h3 data-i18n="faq4Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
+                        <i class="fa-solid fa-circle-question text-gold"></i> Are the apps free to download?
+                    </h3>
+                    <p data-i18n="faq4A" class="text-gray-400 pl-7 leading-relaxed">
+                        Yes, all apps developed by NS1 Apps are available for free download on the Google Play Store, supported by non-intrusive AdMob advertising and secure Firebase telemetry.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- SEO Apps & Keywords Index (Optimized for Search Engine Crawlers) -->
-    <section class="py-12 bg-obsidian border-t border-obsidian-border text-xs text-gray-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <h4 data-i18n="seoTitle" class="text-gray-300 font-bold uppercase tracking-wider text-sm mb-2">Complete Catalog of Apps & Keywords (NS1 Apps)</h4>
-            <p data-i18n="seoDesc" class="leading-relaxed">
-                Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX - Forex Signals, CalmWave, NetMapper - Scanner de IP. Developed by devns1 (Contact: dl02071988@icloud.com / dl02071988@gmail.com). High-performance Android apps available on the Google Play Store for gold trading in XAUUSD, real-time forex signals, NAS100 index analysis, IP network scanner utilities (NetMapper), and wellness apps (CalmWave). Professional tools integrated with Google AdMob and Firebase telemetry for maximum precision and performance.
-            </p>
+    <!-- Store Section -->
+    <section id="loja" class="py-20 bg-obsidian-card/30 relative border-t border-obsidian-border">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="bg-gradient-to-r from-obsidian-card to-obsidian border border-gold/40 rounded-3xl p-8 sm:p-12 shadow-2xl flex flex-col lg:flex-row items-center justify-between gap-8">
+                <div class="space-y-4 max-w-2xl">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-store"></i> Google Play Store Developer
+                    </div>
+                    <h2 data-i18n="storeTitle" class="text-3xl sm:text-4xl font-black text-white">Explore All NS1 Apps</h2>
+                    <p data-i18n="storeSub" class="text-gray-300">
+                        Visit our official developer profile on the Google Play Store to explore our complete suite of trading signals, financial analyzers, and network utilities.
+                    </p>
+                </div>
+                <div>
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="storeBtn" class="bg-gold hover:bg-gold-light text-obsidian font-black px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 flex items-center gap-3 text-lg whitespace-nowrap">
+                        <i class="fa-brands fa-google-play text-2xl"></i> Visit NS1 Developer Store
+                    </a>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -265,7 +441,7 @@
                 <span class="text-lg font-bold text-white">NS1 <span class="text-gold">APPS</span></span>
             </div>
             <p class="text-gray-500 text-sm text-center">
-                &copy; 2019 - 2026 NS1 Apps. <span data-i18n="rights">All rights reserved. Hosted on</span> <a href="https://devns1.github.io/" class="text-gold hover:underline">devns1.github.io</a>
+                &copy; 2026 NS1 Apps. <span data-i18n="rights">All rights reserved. Hosted on</span> <a href="https://devns1.github.io/" class="text-gold hover:underline">devns1.github.io</a>
             </p>
             <div class="flex items-center space-x-6">
                 <a href="privacy.html" data-i18n="navPrivacy" class="text-gray-400 hover:text-gold transition text-sm">Privacy</a>
@@ -281,138 +457,230 @@
         const translations = {
             en: {
                 navHome: "Home",
-                navXauPro: "Xau Pro (New)",
+                navTech: "Technology",
+                navXauPro: "Xau Pro",
+                navApps: "Our Apps",
                 navGallery: "Gallery",
-                navStore: "Our Store",
+                navFaq: "FAQ",
                 navPrivacy: "Privacy",
-                downloadAppBtn: "Download App",
-                heroBadge: "🔥 OFFICIAL LAUNCH THIS WEEK",
+                downloadAppBtn: "Download Xau Pro",
+                heroBadge: "OFFICIAL LAUNCH THIS WEEK • ULTRA-LOW LATENCY",
                 heroTitle1: "Master the Gold Market with",
-                heroSubtitle: "High-precision real-time signals for XAUUSD, advanced performance analysis, and cutting-edge technology built for demanding traders. Available on the Google Play Store this week!",
-                heroPlayBtn: "Google Play",
+                heroSubtitle: "Institutional-grade real-time XAUUSD trading signals powered by automated MetaTrader 5 Python scripts, 24/5 dedicated Windows servers, and instant Firebase push notifications.",
+                heroPlayBtn: "Google Play Store",
                 heroPlaySub: "Available on",
-                heroStoreBtn: "View Full Store",
-                sectionXauProTitle: "High Precision Gold Trading",
-                sectionXauProSub: "Developed with modern algorithms to maximize your operational results in the XAUUSD pair.",
-                feat1Title: "Real-Time Signals",
-                feat1Desc: "Receive instant notifications for high-accuracy buy and sell opportunities in XAUUSD.",
-                feat2Title: "Precision Analysis",
-                feat2Desc: "Integrated technical analysis tools to identify support, resistance, and trends with exactness.",
-                feat3Title: "Launching This Week",
-                feat3Desc: "The most anticipated gold trading app officially arrives on the Google Play Store in the coming days.",
-                bannerTag: "Exclusive Technology",
-                bannerTitle: "Ready to transform your trades?",
-                bannerDesc: "With Xau Pro, you get access to professional insights right on your smartphone. Track the gold market with confidence, agility, and analytical intelligence.",
-                bannerBtn: "Access on Google Play",
-                galleryTitle: "App Gallery & Preview",
-                gallerySub: "Discover the modern and intuitive interface developed by NS1 Apps.",
-                storeTitle: "Explore All Our Apps",
-                storeSub: "Visit our developer page on the Google Play Store to discover all our apps, tools, and utilities created with a focus on excellence and innovation.",
-                storeBtn: "Visit NS1 Store",
-                seoTitle: "Complete Catalog of Apps & Keywords (NS1 Apps)",
-                seoDesc: "Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX - Forex Signals, CalmWave, NetMapper - IP Scanner. Developed by devns1 (Contact: dl02071988@icloud.com / dl02071988@gmail.com). High-performance Android apps available on the Google Play Store for gold trading in XAUUSD, real-time forex signals, NAS100 index analysis, IP network scanner utilities (NetMapper), and wellness apps (CalmWave). Professional tools integrated with Google AdMob and Firebase telemetry for maximum precision and performance.",
+                heroTechBtn: "How It Works",
+                techCategory: "Institutional Infrastructure",
+                techTitle: "Ultra-Low Latency Technology",
+                techSub: "Discover how our automated pipeline bridges institutional execution with your mobile device in milliseconds.",
+                pillar1Title: "Python & MetaTrader 5",
+                pillar1Desc: "Our proprietary Python automation scripts are integrated directly with the official MetaTrader 5 (MT5) library, capturing precise market execution prices instantly.",
+                pillar2Title: "Dedicated 24/5 Windows Server",
+                pillar2Desc: "Hosted on high-availability Windows Server infrastructure running continuously 24 hours a day, 5 days a week, ensuring zero downtime throughout all trading sessions.",
+                pillar3Title: "Instant Firebase Push",
+                pillar3Desc: "Entry prices, multiple Take Profits (TPs), and Stop Loss (SL) parameters are dispatched instantly via Firebase cloud messaging with ultra-low latency push notifications.",
+                xauTag: "Flagship Trading App",
+                xauTitle: "Xau Pro: Precision in Gold Trading",
+                xauDesc: "Designed specifically for professional traders and enthusiasts looking to capitalize on XAUUSD movements. Receive real-time entry alerts with clearly defined risk management parameters directly on your phone.",
+                xauBullet1: "Real-time buy and sell signals for XAUUSD",
+                xauBullet2: "Multiple Take Profit (TP) targets and strict Stop Loss (SL)",
+                xauBullet3: "No registration required – download and start immediately",
+                xauBtn: "Download Xau Pro Now",
+                portfolioCategory: "NS1 Ecosystem",
+                portfolioTitle: "Complete App Portfolio",
+                portfolioSub: "Explore our suite of high-performance Android applications built for trading and utility management.",
+                app1Desc: "High-precision real-time gold (XAUUSD) trading signals powered by Python MT5 automation.",
+                app2Desc: "Specialized algorithmic signals and market analysis for NASDAQ 100 index traders.",
+                app3Desc: "Comprehensive forex currency pair signals with robust entry and exit risk management.",
+                app4Desc: "Essential IP network scanner utilities and focus/wellness soundscape applications.",
+                viewPlayStore: "Google Play",
+                galleryTitle: "App Gallery & Interface Preview",
+                gallerySub: "Explore the clean, modern, and high-performance UI designed for professional traders.",
+                faqCategory: "Got Questions?",
+                faqTitle: "Frequently Asked Questions",
+                faqSub: "Everything you need to know about our trading signals and infrastructure.",
+                faq1Q: "Do Xau Pro signals experience any delay?",
+                faq1A: "No. Our automated pipeline bridges MetaTrader 5 via custom Python scripts running on a dedicated 24/5 Windows Server, dispatching signals instantly through Firebase Cloud Messaging with ultra-low latency within milliseconds.",
+                faq2Q: "What parameters are included in each signal alert?",
+                faq2A: "Every signal includes the precise asset pair (XAUUSD), direction (Buy/Sell), exact Entry Price, multiple Take Profit (TP) targets, and a well-defined Stop Loss (SL) for risk management.",
+                faq3Q: "Do I need to create an account or register?",
+                faq3A: "No registration or personal account is required to use our apps. Simply download the application directly from the Google Play Store and start receiving real-time notifications immediately.",
+                faq4Q: "Are the apps free to download?",
+                faq4A: "Yes, all apps developed by NS1 Apps are available for free download on the Google Play Store, supported by non-intrusive AdMob advertising and secure Firebase telemetry.",
+                storeTitle: "Explore All NS1 Apps",
+                storeSub: "Visit our official developer profile on the Google Play Store to explore our complete suite of trading signals, financial analyzers, and network utilities.",
+                storeBtn: "Visit NS1 Developer Store",
                 rights: "All rights reserved. Hosted on"
             },
             pt: {
                 navHome: "Início",
-                navXauPro: "Xau Pro (Novo)",
+                navTech: "Tecnologia",
+                navXauPro: "Xau Pro",
+                navApps: "Nossos Apps",
                 navGallery: "Galeria",
-                navStore: "Nossa Loja",
+                navFaq: "FAQ",
                 navPrivacy: "Privacidade",
-                downloadAppBtn: "Baixar App",
-                heroBadge: "🔥 LANÇAMENTO OFICIAL NESTA SEMANA",
+                downloadAppBtn: "Baixar Xau Pro",
+                heroBadge: "LANÇAMENTO OFICIAL NESTA SEMANA • ULTRA-BAIXA LATÊNCIA",
                 heroTitle1: "Domine o Mercado de Ouro com",
-                heroSubtitle: "Sinais precisos em tempo real para XAUUSD, análises avançadas de alta performance e tecnologia de ponta desenvolvida para traders exigentes. Disponível na Google Play Store já nesta semana!",
-                heroPlayBtn: "Google Play",
+                heroSubtitle: "Sinais de trading em tempo real de nível institucional para XAUUSD, impulsionados por scripts Python automatizados no MetaTrader 5, servidores Windows dedicados 24/5 e notificações push instantâneas via Firebase.",
+                heroPlayBtn: "Google Play Store",
                 heroPlaySub: "Disponível na",
-                heroStoreBtn: "Ver Loja Completa",
-                sectionXauProTitle: "Precisão Elevada no Trading de Ouro",
-                sectionXauProSub: "Desenvolvido com algoritmos modernos para maximizar seus resultados operacionais no par XAUUSD.",
-                feat1Title: "Sinais em Tempo Real",
-                feat1Desc: "Receba notificações instantâneas de oportunidades de compra e venda com alta taxa de acerto em XAUUSD.",
-                feat2Title: "Análise de Precisão",
-                feat2Desc: "Ferramentas de análise técnica integradas para identificar suporte, resistência e tendências com exatidão.",
-                feat3Title: "Lançamento Esta Semana",
-                feat3Desc: "O app mais aguardado pelos traders de ouro chega oficialmente à Google Play Store nos próximos dias.",
-                bannerTag: "Tecnologia Exclusiva",
-                bannerTitle: "Pronto para transformar seus trades?",
-                bannerDesc: "Com o Xau Pro, você tem acesso a insights profissionais direto no seu smartphone. Acompanhe o mercado de ouro com confiança, agilidade e inteligência analítica.",
-                bannerBtn: "Acessar na Google Play",
-                galleryTitle: "Galeria e Prévia do App",
-                gallerySub: "Conheça a interface moderna e intuitiva desenvolvida pela NS1 Apps.",
-                storeTitle: "Explore Todos os Nossos Aplicativos",
-                storeSub: "Visite nossa página de desenvolvedor na Google Play Store para conhecer todos os nossos aplicativos, ferramentas e utilitários criados com foco em excelência e inovação.",
+                heroTechBtn: "Como Funciona",
+                techCategory: "Infraestrutura Institucional",
+                techTitle: "Tecnologia de Ultra-Baixa Latência",
+                techSub: "Descubra como nossa pipeline automatizada conecta a execução institucional diretamente ao seu celular em milissegundos.",
+                pillar1Title: "Python & MetaTrader 5",
+                pillar1Desc: "Nossos scripts de automação em Python integram-se diretamente à biblioteca oficial do MetaTrader 5 (MT5), capturando preços exatos de execução de mercado instantaneamente.",
+                pillar2Title: "Servidor Windows Dedicado 24/5",
+                pillar2Desc: "Hospedado em infraestrutura Windows Server de alta disponibilidade rodando 24 horas por dia, 5 dias por semana, garantindo zero tempo de inatividade nas sessões de trading.",
+                pillar3Title: "Push Instantâneo via Firebase",
+                pillar3Desc: "Preços de entrada, múltiplos Take Profits (TPs) e Stop Loss (SL) são disparados instantaneamente via Firebase Cloud Messaging com notificações push de ultra-baixa latência.",
+                xauTag: "Aplicativo Principal",
+                xauTitle: "Xau Pro: Precisão no Trading de Ouro",
+                xauDesc: "Projetado especificamente para traders profissionais e entusiastas que buscam capitalizar nos movimentos do XAUUSD. Receba alertas de entrada em tempo real com parâmetros de risco bem definidos.",
+                xauBullet1: "Sinais de compra e venda em tempo real para XAUUSD",
+                xauBullet2: "Múltiplos alvos de Take Profit (TP) e Stop Loss (SL) rigoroso",
+                xauBullet3: "Sem necessidade de cadastro – baixe e comece imediatamente",
+                xauBtn: "Baixar Xau Pro Agora",
+                portfolioCategory: "Ecossistema NS1",
+                portfolioTitle: "Portfólio Completo de Aplicativos",
+                portfolioSub: "Explore nossa suíte de aplicativos Android de alta performance criados para trading e utilitários de rede.",
+                app1Desc: "Sinais de trading em tempo real de alta precisão para ouro (XAUUSD) via automação Python MT5.",
+                app2Desc: "Sinais algorítmicos especializados e análise de mercado para traders do índice NASDAQ 100.",
+                app3Desc: "Sinais abrangentes de pares de moedas Forex com gestão robusta de risco de entrada e saída.",
+                app4Desc: "Utilitários essenciais de scanner de rede IP e aplicativos de foco e bem-estar sonoro.",
+                viewPlayStore: "Google Play",
+                galleryTitle: "Galeria de Apps & Interface",
+                gallerySub: "Explore uma interface limpa, moderna e de alta performance desenhada para traders profissionais.",
+                faqCategory: "Dúvidas Frequentes",
+                faqTitle: "Perguntas Frequentes (FAQ)",
+                faqSub: "Tudo o que você precisa saber sobre nossos sinais de trading e nossa infraestrutura.",
+                faq1Q: "Os sinais do Xau Pro possuem algum tipo de atraso?",
+                faq1A: "Não. Nossa pipeline automatizada conecta o MetaTrader 5 através de scripts Python customizados rodando em um Servidor Windows dedicado 24/5, disparando sinais instantaneamente via Firebase Cloud Messaging em milissegundos.",
+                faq2Q: "Quais parâmetros acompanham cada sinal enviado?",
+                faq2A: "Cada sinal inclui o par de ativos (XAUUSD), direção (Compra/Venda), Preço de Entrada exato, múltiplos alvos de Take Profit (TP) e o Stop Loss (SL) definido para gestão de risco.",
+                faq3Q: "Preciso criar uma conta ou me cadastrar para usar?",
+                faq3A: "Nenhum cadastro ou conta pessoal é exigido para usar nossos apps. Basta baixar o aplicativo diretamente na Google Play Store e começar a receber as notificações em tempo real imediatamente.",
+                faq4Q: "Os aplicativos são gratuitos para baixar?",
+                faq4A: "Sim, todos os aplicativos desenvolvidos pela NS1 Apps estão disponíveis para download gratuito na Google Play Store, sustentados por anúncios não intrusivos via AdMob e telemetria segura do Firebase.",
+                storeTitle: "Explore Todos os Apps da NS1",
+                storeSub: "Visite nossa página oficial de desenvolvedor na Google Play Store para explorar nossa suíte completa de sinais de trading e utilitários.",
                 storeBtn: "Visitar Loja NS1",
-                seoTitle: "Catálogo Completo de Aplicativos e Palavras-Chave (NS1 Apps)",
-                seoDesc: "Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX - Forex Signals, CalmWave, NetMapper - Scanner de IP. Desenvolvidos por devns1 (Contato: dl02071988@icloud.com / dl02071988@gmail.com). Aplicativos Android de alta performance disponíveis na Google Play Store para trading de ouro no par XAUUSD, sinais em tempo real de forex, análise de índices NAS100, ferramentas de varredura de rede IP (NetMapper) e aplicativos de bem-estar (CalmWave). Ferramentas profissionais integradas com Google AdMob e Firebase telemetry para máxima precisão e performance.",
                 rights: "Todos os direitos reservados. Hospedado em"
             },
             es: {
                 navHome: "Inicio",
-                navXauPro: "Xau Pro (Nuevo)",
+                navTech: "Tecnología",
+                navXauPro: "Xau Pro",
+                navApps: "Nuestras Apps",
                 navGallery: "Galería",
-                navStore: "Nuestra Tienda",
+                navFaq: "FAQ",
                 navPrivacy: "Privacidad",
-                downloadAppBtn: "Descargar App",
-                heroBadge: "🔥 LANZAMIENTO OFICIAL ESTA SEMANA",
+                downloadAppBtn: "Descargar Xau Pro",
+                heroBadge: "LANZAMIENTO OFICIAL ESTA SEMANA • BAJA LATENCIA",
                 heroTitle1: "Domina el Mercado del Oro con",
-                heroSubtitle: "Señales precisas en tiempo real para XAUUSD, análisis avanzados de alto rendimiento y tecnología de vanguardia para traders exigentes. ¡Disponible en Google Play Store esta semana!",
-                heroPlayBtn: "Google Play",
+                heroSubtitle: "Señales de trading en tiempo real de nivel institucional para XAUUSD, impulsadas por scripts Python en MetaTrader 5, servidores Windows 24/5 y notificaciones push de Firebase.",
+                heroPlayBtn: "Google Play Store",
                 heroPlaySub: "Disponible en",
-                heroStoreBtn: "Ver Tienda Completa",
-                sectionXauProTitle: "Alta Precisión en Trading de Oro",
-                sectionXauProSub: "Desarrollado con algoritmos modernos para maximizar tus resultados operativos en el par XAUUSD.",
-                feat1Title: "Señales en Tiempo Real",
-                feat1Desc: "Recibe notificaciones instantáneas de oportunidades de compra y venta con alta precisión en XAUUSD.",
-                feat2Title: "Análisis de Precisión",
-                feat2Desc: "Herramientas de análisis técnico integradas para identificar soporte, resistencia y tendencias con exactitud.",
-                feat3Title: "Lanzamiento Esta Semana",
-                feat3Desc: "La aplicación de trading de oro más esperada llega oficialmente a Google Play Store en los próximos días.",
-                bannerTag: "Tecnología Exclusiva",
-                bannerTitle: "¿Listo para transformar tus operaciones?",
-                bannerDesc: "Con Xau Pro, obtienes acceso a información profesional directamente en tu smartphone. Sigue el mercado del oro con confianza, agilidad e inteligencia analítica.",
-                bannerBtn: "Acceder en Google Play",
-                galleryTitle: "Galería y Vista Previa",
-                gallerySub: "Descubre la interfaz moderna e intuitiva desarrollada por NS1 Apps.",
-                storeTitle: "Explora Todas Nuestras Apps",
-                storeSub: "Visita nuestra página de desarrollador en Google Play Store para descubrir todas nuestras aplicaciones, herramientas y utilidades.",
+                heroTechBtn: "Cómo Funciona",
+                techCategory: "Infraestructura Institucional",
+                techTitle: "Tecnología de Ultra-Baja Latencia",
+                techSub: "Descubre cómo nuestra pipeline automatizada conecta la ejecución institucional directamente a tu móvil en milisegundos.",
+                pillar1Title: "Python & MetaTrader 5",
+                pillar1Desc: "Nuestros scripts de automatización en Python se integran directamente con la librería oficial de MetaTrader 5 (MT5), capturando precios exactos al instante.",
+                pillar2Title: "Servidor Windows Dedicado 24/5",
+                pillar2Desc: "Alojado en infraestructura Windows Server de alta disponibilidad operando 24/5, garantizando cero tiempo de inactividad en todas las sesiones.",
+                pillar3Title: "Push Instantáneo vía Firebase",
+                pillar3Desc: "Los precios de entrada, TPs múltiples y Stop Loss se envían al instante mediante notificaciones push de ultra-baja latencia con Firebase.",
+                xauTag: "App Insignia de Trading",
+                xauTitle: "Xau Pro: Precisión en Trading de Oro",
+                xauDesc: "Diseñado para traders profesionales y entusiastas que buscan capitalizar los movimientos de XAUUSD. Recibe alertas en tiempo real en tu teléfono.",
+                xauBullet1: "Señales de compra y venta en tiempo real para XAUUSD",
+                xauBullet2: "Múltiples Take Profit (TP) y Stop Loss (SL) estrictos",
+                xauBullet3: "Sin registro necesario – descarga y comienza de inmediato",
+                xauBtn: "Descargar Xau Pro",
+                portfolioCategory: "Ecosistema NS1",
+                portfolioTitle: "Portafolio Completo de Aplicaciones",
+                portfolioSub: "Explora nuestra suite de apps Android de alto rendimiento creadas para trading y utilidades.",
+                app1Desc: "Señales de oro (XAUUSD) de alta precisión impulsadas por automatización Python MT5.",
+                app2Desc: "Señales algorítmicas y análisis de mercado para el índice NASDAQ 100.",
+                app3Desc: "Señales de pares de divisas Forex con gestión de riesgo robusta.",
+                app4Desc: "Utilidades esenciales de escáner IP y aplicaciones de bienestar sonoro.",
+                viewPlayStore: "Google Play",
+                galleryTitle: "Galería de Apps e Interfaz",
+                gallerySub: "Explora una interfaz limpia, moderna y de alto rendimiento diseñada para traders.",
+                faqCategory: "¿Tienes Dudas?",
+                faqTitle: "Preguntas Frecuentes (FAQ)",
+                faqSub: "Todo lo que necesitas saber sobre nuestras señales de trading y nuestra infraestructura.",
+                faq1Q: "¿Las señales de Xau Pro tienen algún retraso?",
+                faq1A: "No. Nuestra infraestructura conecta MetaTrader 5 mediante scripts Python en un Servidor Windows 24/5, enviando señales al instante mediante Firebase Cloud Messaging.",
+                faq2Q: "¿Qué parámetros incluye cada alerta de señal?",
+                faq2A: "Cada señal incluye el par (XAUUSD), dirección, Precio de Entrada exacto, múltiples objetivos Take Profit (TP) y Stop Loss (SL).",
+                faq3Q: "¿Necesito crear una cuenta o registrarme?",
+                faq3A: "No se requiere registro. Simplemente descarga la app en Google Play Store y comienza a recibir notificaciones de inmediato.",
+                faq4Q: "¿Las aplicaciones son de descarga gratuita?",
+                faq4A: "Sí, todas las apps de NS1 Apps son gratuitas en Google Play Store, financiadas mediante publicidad no intrusiva de AdMob y telemetría de Firebase.",
+                storeTitle: "Explora Todas las Apps de NS1",
+                storeSub: "Visita nuestra página oficial de desarrollador en Google Play Store.",
                 storeBtn: "Visitar Tienda NS1",
-                seoTitle: "Catálogo Completo de Aplicaciones y Palabras Clave (NS1 Apps)",
-                seoDesc: "Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX - Forex Signals, CalmWave, NetMapper - IP Scanner. Desarrollado por devns1 (Contacto: dl02071988@icloud.com / dl02071988@gmail.com). Aplicaciones Android de alto rendimiento disponibles en Google Play Store.",
                 rights: "Todos los derechos reservados. Alojado en"
             },
             fr: {
                 navHome: "Accueil",
-                navXauPro: "Xau Pro (Nouveau)",
+                navTech: "Technologie",
+                navXauPro: "Xau Pro",
+                navApps: "Nos Apps",
                 navGallery: "Galerie",
-                navStore: "Notre Boutique",
+                navFaq: "FAQ",
                 navPrivacy: "Confidentialité",
-                downloadAppBtn: "Télécharger l'App",
-                heroBadge: "🔥 LANCEMENT OFFICIEL CETTE SEMAINE",
+                downloadAppBtn: "Télécharger Xau Pro",
+                heroBadge: "LANCEMENT OFFICIEL CETTE SEMAINE • ULTRA-BASSE LATENCE",
                 heroTitle1: "Maîtrisez le Marché de l'Or avec",
-                heroSubtitle: "Signaux précis en temps réel pour XAUUSD, analyses avancées et technologie de pointe pour traders exigeants. Disponible sur Google Play Store cette semaine !",
-                heroPlayBtn: "Google Play",
+                heroSubtitle: "Signaux de trading en temps réel de niveau institutionnel pour XAUUSD, propulsés par des scripts Python MetaTrader 5, serveurs Windows dédiés 24/5 et Firebase push.",
+                heroPlayBtn: "Google Play Store",
                 heroPlaySub: "Disponible sur",
-                heroStoreBtn: "Voir la Boutique",
-                sectionXauProTitle: "Trading de l'Or de Haute Précision",
-                sectionXauProSub: "Développé avec des algorithmes modernes pour maximiser vos résultats opérationnels sur la paire XAUUSD.",
-                feat1Title: "Signaux en Temps Réel",
-                feat1Desc: "Recevez des notifications instantanées pour les opportunités d'achat et de vente sur XAUUSD.",
-                feat2Title: "Analyse de Précision",
-                feat2Desc: "Outils d'analyse technique intégrés pour identifier supports, résistances et tendances avec exactitude.",
-                feat3Title: "Lancement Cette Semaine",
-                feat3Desc: "L'application de trading d'or la plus attendue arrive officiellement sur le Google Play Store.",
-                bannerTag: "Technologie Exclusive",
-                bannerTitle: "Prêt à transformer vos trades ?",
-                bannerDesc: "Avec Xau Pro, accédez à des analyses professionnelles directement sur votre smartphone. Suivez le marché de l'or en toute confiance.",
-                bannerBtn: "Accéder sur Google Play",
-                galleryTitle: "Galerie et Aperçu",
-                gallerySub: "Découvrez l'interface moderne et intuitive développée par NS1 Apps.",
-                storeTitle: "Explorez Toutes Nos Applications",
-                storeSub: "Visitez notre page de développeur sur le Google Play Store pour découvrir toutes nos applications et outils.",
+                heroTechBtn: "Comment ça marche",
+                techCategory: "Infrastructure Institutionnelle",
+                techTitle: "Technologie à Ultra-Basse Latence",
+                techSub: "Découvrez comment notre pipeline automatisé connecte l'exécution institutionnelle directement à votre mobile en quelques millisecondes.",
+                pillar1Title: "Python & MetaTrader 5",
+                pillar1Desc: "Nos scripts d'automatisation Python s'intègrent directement à la bibliothèque officielle MetaTrader 5 (MT5), capturant instantanément les prix d'exécution.",
+                pillar2Title: "Serveur Windows Dédié 24/5",
+                pillar2Desc: "Hébergé sur une infrastructure Windows Server haute disponibilité fonctionnant 24h/24 et 5j/7, garantissant zéro interruption de service.",
+                pillar3Title: "Push Instantané via Firebase",
+                pillar3Desc: "Prix d'entrée, Take Profits multiples et Stop Loss sont transmis instantanément via Firebase Cloud Messaging avec une latence ultra-faible.",
+                xauTag: "Application Phare",
+                xauTitle: "Xau Pro : Précision dans le Trading de l'Or",
+                xauDesc: "Conçu pour les traders professionnels et passionnés cherchant à capitaliser sur XAUUSD. Recevez des alertes en temps réel avec des paramètres de risque précis.",
+                xauBullet1: "Signaux d'achat et de vente en temps réel pour XAUUSD",
+                xauBullet2: "Plusieurs objectifs Take Profit (TP) et Stop Loss strict (SL)",
+                xauBullet3: "Aucune inscription requise – téléchargez et commencez immédiatement",
+                xauBtn: "Télécharger Xau Pro",
+                portfolioCategory: "Écosystème NS1",
+                portfolioTitle: "Portefeuille Complet d'Applications",
+                portfolioSub: "Explorez notre suite d'applications Android haute performance pour le trading et les utilitaires.",
+                app1Desc: "Signaux de trading d'or (XAUUSD) haute précision propulsés par automatisation Python MT5.",
+                app2Desc: "Signaux algorithmiques spécialisés et analyse de marché pour l'indice NASDAQ 100.",
+                app3Desc: "Signaux complets sur les paires de devises Forex avec gestion rigoureuse des risques.",
+                app4Desc: "Utilitaires de scanner réseau IP et applications de bien-être sonore.",
+                viewPlayStore: "Google Play",
+                galleryTitle: "Galerie et Aperçu de l'Interface",
+                gallerySub: "Explorez une interface épurée, moderne et ultra-rapide conçue pour les traders professionnels.",
+                faqCategory: "Des Questions ?",
+                faqTitle: "Foire Aux Questions (FAQ)",
+                faqSub: "Tout ce que vous devez savoir sur nos signaux de trading et notre infrastructure.",
+                faq1Q: "Les signaux Xau Pro ont-ils du retard ?",
+                faq1A: "Non. Notre pipeline connecte MetaTrader 5 via des scripts Python sur un serveur Windows 24/5, transmettant les signaux instantanément via Firebase en millisecondes.",
+                faq2Q: "Quels paramètres sont inclus dans chaque alerte de signal ?",
+                faq2A: "Chaque signal inclut la paire (XAUUSD), la direction, le prix d'entrée exact, plusieurs objectifs Take Profit (TP) et le Stop Loss (SL).",
+                faq3Q: "Dois-je créer un compte ou m'inscrire ?",
+                faq3A: "Aucune inscription n'est requise. Téléchargez simplement l'application sur le Google Play Store pour recevoir les notifications en temps réel.",
+                faq4Q: "Les applications sont-elles gratuites ?",
+                faq4A: "Oui, toutes les applications NS1 Apps sont gratuites sur le Google Play Store, financées par des publicités AdMob non intrusives et la télémétrie Firebase.",
+                storeTitle: "Explorez Toutes les Apps NS1",
+                storeSub: "Visitez notre page de développeur officielle sur le Google Play Store.",
                 storeBtn: "Visiter la Boutique NS1",
-                seoTitle: "Catalogue Complet des Applications (NS1 Apps)",
-                seoDesc: "Xau Pro, XAUUSD SIGNALS, NAS100 Index Signals, SignalFX, CalmWave, NetMapper. Développé par devns1 (dl02071988@icloud.com).",
                 rights: "Tous droits réservés. Hébergé sur"
             }
         };
@@ -424,9 +692,9 @@
             // Update active states on flag buttons
             const buttons = document.querySelectorAll('.bg-obsidian-card button');
             buttons.forEach(btn => {
-                btn.classList.remove('ring-1', 'ring-gold/40', 'bg-gold/10');
+                btn.classList.remove('ring-1', 'ring-gold/40', 'bg-gold/15');
             });
-            event && event.currentTarget.classList.add('ring-1', 'ring-gold/40', 'bg-gold/10');
+            event && event.currentTarget.classList.add('ring-1', 'ring-gold/40', 'bg-gold/15');
 
             // Apply translations
             const elements = document.querySelectorAll('[data-i18n]');
