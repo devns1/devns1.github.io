@@ -490,10 +490,8 @@
                 <span class="text-lg font-bold text-white">NS1 <span class="text-gold">APPS</span></span>
             </div>
 
-            <div class="flex items-center space-x-2 text-xs text-gray-300 bg-obsidian-card border border-obsidian-border px-4 py-2 rounded-xl shadow-inner">
-                <i class="fa-solid fa-eye text-gold"></i>
-                <span data-i18n="visitorCount">Visitors:</span>
-                <span id="visitor-count" class="font-bold text-gold">1,482</span>
+            <div class="flex items-center space-x-2 text-xs text-gray-300 bg-obsidian-card border border-obsidian-border px-3 py-2 rounded-xl shadow-inner">
+                <div align=center><a href='https://contador.s12.com.br'><img src='https://contador.s12.com.br/img-xW9c6wa9846w6Zw3-2.gif' border='0' alt='contador free'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=xW9c6wa9846w6Zw3'></script></div>
             </div>
 
             <p class="text-gray-500 text-sm text-center">
@@ -771,16 +769,15 @@
             const savedLang = localStorage.getItem('preferred_lang') || 'en';
             setLanguage(savedLang);
 
-            // LocalStorage / SessionStorage Visitor Counter
+            // Instant increment visitor counter for testing & live viewing
             let visits = localStorage.getItem('ns1_site_visits');
             if (!visits) {
                 visits = 1482;
-            }
-            if (!sessionStorage.getItem('visited_session')) {
+            } else {
                 visits = parseInt(visits) + 1;
-                localStorage.setItem('ns1_site_visits', visits);
-                sessionStorage.setItem('visited_session', 'true');
             }
+            localStorage.setItem('ns1_site_visits', visits);
+
             const counterEl = document.getElementById('visitor-count');
             if (counterEl) {
                 counterEl.textContent = Number(visits).toLocaleString();
