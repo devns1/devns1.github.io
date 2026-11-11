@@ -8,21 +8,27 @@
     <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='25' fill='%23D4AF37'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' fill='%230B0F19' font-family='sans-serif' font-weight='900' font-size='42'>NS1</text></svg>">
 
-    <!-- SEO Meta Tags & Keywords -->
+    <!-- SEO Meta & Open Graph -->
     <meta name="description" content="Official developer portal of NS1 Apps. Download Xau Pro on Google Play for real-time XAUUSD signals, gold trading alerts, MT5 Python automation, and low-latency Firebase push notifications.">
-    <meta name="keywords" content="XAUUSD signals, Gold signals, Gold trading signals, XAUUSD trading, Gold trading, XAUUSD buy sell signals, Forex signals, Gold buy sell, Gold market analysis, XAUUSD alerts, Gold price alerts, Trading signals, Forex trading signals, Gold scalping, XAUUSD scalping, Gold day trading, Gold technical analysis, Live gold signals, Gold entry signals, Gold stop loss, Gold take profit, XAUUSD strategy, Forex market analysis, Gold trading alerts, Gold signal app, MT5 gold signals, MT4 gold signals, Ouro sinais, Sinais de ouro, Sinais XAUUSD, Sinais Forex, Trade ouro, Análise XAUUSD, Xau Pro, NAS100 Index Signals, SignalFX, NetMapper, CalmWave, devns1, Google Play Store">
     <meta name="author" content="devns1">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://devns1.github.io/">
 
-    <!-- Open Graph / Social Media Meta Tags -->
+    <!-- Open Graph / Social Media Meta Tags (Encoded Image URL) -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://devns1.github.io/">
     <meta property="og:title" content="NS1 Apps - Xau Pro | High-Precision XAUUSD Signals">
     <meta property="og:description" content="Instant millisecond execution alerts for XAUUSD, NAS100, and Forex powered by dedicated MT5 Python infrastructure and Firebase. Available now on Google Play.">
-    <meta property="og:image" content="https://devns1.github.io/Sinais XAUUSD_ Ouro em Alta.png">
+    <meta property="og:image" content="https://devns1.github.io/Sinais%20XAUUSD_%20Ouro%20em%20Alta.png">
 
-    <!-- Structured Data: SoftwareApplication Schema (JSON-LD) -->
+    <!-- Twitter Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://devns1.github.io/">
+    <meta name="twitter:title" content="NS1 Apps - Xau Pro | High-Precision XAUUSD Signals">
+    <meta name="twitter:description" content="Instant millisecond execution alerts for XAUUSD, NAS100, and Forex powered by dedicated MT5 Python infrastructure and Firebase.">
+    <meta name="twitter:image" content="https://devns1.github.io/Sinais%20XAUUSD_%20Ouro%20em%20Alta.png">
+
+    <!-- Structured Data: SoftwareApplication Schema (JSON-LD) without fake ratings -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,11 +46,6 @@
         "@type": "Organization",
         "name": "NS1 Apps",
         "url": "https://devns1.github.io/"
-      },
-      "aggregateRating": {
-        "@type": "AggregateRating",
-        "ratingValue": "4.9",
-        "ratingCount": "1500"
       }
     }
     </script>
@@ -85,6 +86,8 @@
                 </div>
                 <span class="text-xl font-bold tracking-wider text-white">NS1 <span class="text-gold">APPS</span></span>
             </div>
+
+            <!-- Desktop Menu -->
             <div class="hidden lg:flex items-center space-x-8">
                 <a href="#inicio" data-i18n="navHome" class="text-gray-300 hover:text-gold transition">Home</a>
                 <a href="#tecnologia" data-i18n="navTech" class="text-gray-300 hover:text-gold transition">Technology</a>
@@ -115,10 +118,29 @@
                     </button>
                 </div>
 
-                <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="downloadAppBtn" class="hidden sm:flex bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2.5 rounded-xl transition shadow-lg shadow-gold/20 items-center gap-2">
+                <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" rel="noopener noreferrer" data-i18n="downloadAppBtn" class="hidden sm:flex bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2.5 rounded-xl transition shadow-lg shadow-gold/20 items-center gap-2">
                     <i class="fa-brands fa-google-play"></i> Download Xau Pro
                 </a>
+
+                <!-- Mobile Hamburger Button -->
+                <button id="mobile-menu-btn" class="lg:hidden text-gray-300 hover:text-gold text-2xl p-2 focus:outline-none" aria-label="Toggle Navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
             </div>
+        </div>
+
+        <!-- Mobile Dropdown Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-obsidian-card border-b border-obsidian-border px-6 py-6 space-y-4">
+            <a href="#inicio" data-i18n="navHome" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">Home</a>
+            <a href="#tecnologia" data-i18n="navTech" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">Technology</a>
+            <a href="#xaupro" data-i18n="navXauPro" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">Xau Pro</a>
+            <a href="#portfolio" data-i18n="navApps" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">Our Apps</a>
+            <a href="#galeria" data-i18n="navGallery" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">Gallery</a>
+            <a href="#faq" data-i18n="navFaq" class="block text-gray-300 hover:text-gold transition font-medium" onclick="toggleMobileMenu()">FAQ</a>
+            <a href="privacy.html" data-i18n="navPrivacy" class="block text-gray-300 hover:text-gold transition font-medium">Privacy</a>
+            <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" rel="noopener noreferrer" data-i18n="downloadAppBtn" class="flex justify-center items-center gap-2 bg-gold text-obsidian font-bold px-4 py-3 rounded-xl shadow-lg">
+                <i class="fa-brands fa-google-play"></i> Download Xau Pro
+            </a>
         </div>
     </nav>
 
@@ -140,7 +162,7 @@
                         Institutional-grade real-time XAUUSD trading signals powered by automated MetaTrader 5 Python scripts, 24/5 dedicated Windows servers, and instant Firebase push notifications.
                     </p>
                     <div class="flex flex-wrap gap-4 pt-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" class="bg-gold hover:bg-gold-light text-obsidian font-extrabold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/25 flex items-center gap-3 text-lg">
+                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" rel="noopener noreferrer" class="bg-gold hover:bg-gold-light text-obsidian font-extrabold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/25 flex items-center gap-3 text-lg">
                             <i class="fa-brands fa-google-play text-2xl"></i>
                             <div class="text-left">
                                 <div data-i18n="heroPlaySub" class="text-xs font-semibold opacity-80 uppercase tracking-wider">Available on</div>
@@ -238,14 +260,14 @@
                         </li>
                     </ul>
                     <div class="pt-4">
-                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="xauBtn" class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-obsidian font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 text-lg">
+                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" rel="noopener noreferrer" data-i18n="xauBtn" class="inline-flex items-center gap-3 bg-gold hover:bg-gold-light text-obsidian font-bold px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 text-lg">
                             <i class="fa-brands fa-google-play text-xl"></i> Download Xau Pro Now
                         </a>
                     </div>
                 </div>
                 <div class="lg:col-span-6 flex justify-center">
                     <div class="relative w-full max-w-lg rounded-3xl p-4 bg-gradient-to-b from-gold/30 to-obsidian-border shadow-2xl">
-                        <img src="Precisão elevada no trading de ouro.png" alt="Xau Pro precision gold trading app preview" class="rounded-2xl w-full h-auto object-cover shadow-2xl">
+                        <img src="Precisão elevada no trading de ouro.png" alt="Xau Pro precision gold trading app preview" loading="lazy" class="rounded-2xl w-full h-auto object-cover shadow-2xl">
                     </div>
                 </div>
             </div>
@@ -267,7 +289,7 @@
                 <div class="bg-obsidian-card border border-gold/40 rounded-3xl p-8 flex flex-col justify-between hover:border-gold transition shadow-xl shadow-gold/5">
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
-                            <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="Xau Pro Icon" class="w-12 h-12 rounded-xl object-cover border border-gold/40 shadow-md shrink-0">
+                            <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="Xau Pro Icon" loading="lazy" class="w-12 h-12 rounded-xl object-cover border border-gold/40 shadow-md shrink-0">
                             <div>
                                 <h3 class="text-xl font-bold text-white">Xau Pro</h3>
                                 <span class="text-xs text-gold font-semibold uppercase tracking-wider">Flagship Gold Trading</span>
@@ -279,7 +301,7 @@
                     </div>
                     <div class="pt-6 border-t border-obsidian-border flex items-center justify-between">
                         <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px]"></i> Live on Play Store</span>
-                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" data-i18n="downloadPlayStore" class="bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
+                        <a href="https://play.google.com/store/apps/details?id=com.ns1.xaupro" target="_blank" rel="noopener noreferrer" data-i18n="downloadPlayStore" class="bg-gold hover:bg-gold-light text-obsidian font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
                             <i class="fa-brands fa-google-play"></i> Get App
                         </a>
                     </div>
@@ -289,7 +311,7 @@
                 <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 flex flex-col justify-between hover:border-gold/50 transition shadow-xl">
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
-                            <img src="Imagem colada.png" alt="NAS100 Icon" class="w-12 h-12 rounded-xl object-cover border border-obsidian-border shadow-md shrink-0">
+                            <img src="Imagem colada.png" alt="NAS100 Icon" loading="lazy" class="w-12 h-12 rounded-xl object-cover border border-obsidian-border shadow-md shrink-0">
                             <div>
                                 <h3 class="text-xl font-bold text-white">NAS100 Index Signals</h3>
                                 <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">NASDAQ 100 Analytics</span>
@@ -301,7 +323,7 @@
                     </div>
                     <div class="pt-6 border-t border-obsidian-border flex items-center justify-between">
                         <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px]"></i> Live on Play Store</span>
-                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
+                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" rel="noopener noreferrer" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
                             <i class="fa-brands fa-google-play"></i> Get App
                         </a>
                     </div>
@@ -311,7 +333,7 @@
                 <div class="bg-obsidian-card border border-obsidian-border rounded-3xl p-8 flex flex-col justify-between hover:border-gold/50 transition shadow-xl">
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
-                            <img src="Imagem colada (4).png" alt="SignalFX Icon" class="w-12 h-12 rounded-xl object-cover border border-obsidian-border shadow-md shrink-0">
+                            <img src="Imagem colada (4).png" alt="SignalFX Icon" loading="lazy" class="w-12 h-12 rounded-xl object-cover border border-obsidian-border shadow-md shrink-0">
                             <div>
                                 <h3 class="text-xl font-bold text-white">SignalFX - Forex Signals</h3>
                                 <span class="text-xs text-gray-400 font-semibold uppercase tracking-wider">Currency Market Signals</span>
@@ -323,7 +345,7 @@
                     </div>
                     <div class="pt-6 border-t border-obsidian-border flex items-center justify-between">
                         <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px]"></i> Live on Play Store</span>
-                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
+                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" rel="noopener noreferrer" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
                             <i class="fa-brands fa-google-play"></i> Get App
                         </a>
                     </div>
@@ -334,8 +356,8 @@
                     <div class="space-y-4">
                         <div class="flex items-center space-x-4">
                             <div class="flex -space-x-3 shrink-0">
-                                <img src="Imagem colada (2).png" alt="NetMapper Icon" class="w-10 h-10 rounded-xl object-cover border border-obsidian-border shadow-md">
-                                <img src="Imagem colada (3).png" alt="CalmWave Icon" class="w-10 h-10 rounded-xl object-cover border border-obsidian-border shadow-md">
+                                <img src="Imagem colada (2).png" alt="NetMapper Icon" loading="lazy" class="w-10 h-10 rounded-xl object-cover border border-obsidian-border shadow-md">
+                                <img src="Imagem colada (3).png" alt="CalmWave Icon" loading="lazy" class="w-10 h-10 rounded-xl object-cover border border-obsidian-border shadow-md">
                             </div>
                             <div>
                                 <h3 class="text-xl font-bold text-white">NetMapper & CalmWave</h3>
@@ -348,7 +370,7 @@
                     </div>
                     <div class="pt-6 border-t border-obsidian-border flex items-center justify-between">
                         <span class="text-xs text-emerald-400 font-semibold flex items-center gap-1.5"><i class="fa-solid fa-circle text-[8px]"></i> Live on Play Store</span>
-                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
+                        <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" rel="noopener noreferrer" data-i18n="downloadPlayStore" class="bg-obsidian-border hover:bg-gold hover:text-obsidian text-white font-bold px-4 py-2 rounded-xl text-sm transition flex items-center gap-2">
                             <i class="fa-brands fa-google-play"></i> Get App
                         </a>
                     </div>
@@ -357,7 +379,7 @@
         </div>
     </section>
 
-    <!-- Gallery Section -->
+    <!-- Gallery Section with Lightbox Modal -->
     <section id="galeria" class="py-24 bg-obsidian-card/40 relative border-t border-obsidian-border">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
@@ -366,36 +388,44 @@
             </div>
 
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                <!-- Image Cards -->
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Imagem colada.png" alt="App Preview 1" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <!-- Image Cards with Lightbox trigger -->
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Imagem colada.png" alt="App Preview 1" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Imagem colada (2).png" alt="App Preview 2" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Imagem colada (2).png" alt="App Preview 2" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Imagem colada (3).png" alt="App Preview 3" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Imagem colada (3).png" alt="App Preview 3" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Imagem colada (4).png" alt="App Preview 4" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Imagem colada (4).png" alt="App Preview 4" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Imagem colada (5).png" alt="App Preview 5" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Imagem colada (5).png" alt="App Preview 5" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="ChatGPT Image 3 de set. de 2026, 16_27_22.png" alt="App Preview 6" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="ChatGPT Image 3 de set. de 2026, 16_27_22.png" alt="App Preview 6" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="ChatGPT Image 30 de ago. de 2026, 17_00_39.png" alt="App Preview 7" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="ChatGPT Image 30 de ago. de 2026, 17_00_39.png" alt="App Preview 7" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
-                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg">
-                    <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="App Preview 8" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
+                <div class="rounded-2xl overflow-hidden border border-obsidian-border bg-obsidian group hover:border-gold/50 transition shadow-lg cursor-pointer" onclick="openLightbox(this.querySelector('img').src)">
+                    <img src="Sinais XAUUSD_ Ouro em Alta.png" alt="App Preview 8" loading="lazy" class="w-full h-64 object-cover group-hover:scale-105 transition duration-300">
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FAQ Section -->
+    <!-- Lightbox Modal -->
+    <div id="lightbox-modal" class="fixed inset-0 z-50 hidden bg-black/90 backdrop-blur-md flex items-center justify-center p-4" onclick="closeLightbox()">
+        <div class="relative max-w-5xl max-h-[90vh]">
+            <button class="absolute -top-12 right-0 text-white text-3xl font-bold hover:text-gold focus:outline-none" onclick="closeLightbox()">&times;</button>
+            <img id="lightbox-img" src="" alt="Enlarged Preview" class="max-w-full max-h-[85vh] rounded-2xl object-contain border border-gold/40 shadow-2xl">
+        </div>
+    </div>
+
+    <!-- FAQ Section with Accordion -->
     <section id="faq" class="py-24 bg-obsidian relative border-t border-obsidian-border">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 space-y-4">
@@ -404,45 +434,49 @@
                 <p data-i18n="faqSub" class="text-gray-400 text-lg">Everything you need to know about our trading signals and infrastructure.</p>
             </div>
 
-            <div class="space-y-6">
+            <div class="space-y-4">
                 <!-- FAQ Item 1 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
-                    <h3 data-i18n="faq1Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-question text-gold"></i> Do Xau Pro signals experience any delay?
-                    </h3>
-                    <p data-i18n="faq1A" class="text-gray-400 pl-7 leading-relaxed">
-                        No. Our automated pipeline bridges MetaTrader 5 via custom Python scripts running on a dedicated 24/5 Windows Server, dispatching signals instantly through Firebase Cloud Messaging with ultra-low latency within milliseconds.
-                    </p>
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-bold text-white flex items-center justify-between focus:outline-none hover:text-gold transition" onclick="toggleAccordion(this)">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-question text-gold"></i> <span data-i18n="faq1Q">Do Xau Pro signals experience any delay?</span></span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed">
+                        <p data-i18n="faq1A">No. Our automated pipeline bridges MetaTrader 5 via custom Python scripts running on a dedicated 24/5 Windows Server, dispatching signals instantly through Firebase Cloud Messaging with ultra-low latency within milliseconds.</p>
+                    </div>
                 </div>
 
                 <!-- FAQ Item 2 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
-                    <h3 data-i18n="faq2Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-question text-gold"></i> What parameters are included in each signal alert?
-                    </h3>
-                    <p data-i18n="faq2A" class="text-gray-400 pl-7 leading-relaxed">
-                        Every signal includes the precise asset pair (XAUUSD), direction (Buy/Sell), exact Entry Price, multiple Take Profit (TP) targets, and a well-defined Stop Loss (SL) for risk management.
-                    </p>
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-bold text-white flex items-center justify-between focus:outline-none hover:text-gold transition" onclick="toggleAccordion(this)">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-question text-gold"></i> <span data-i18n="faq2Q">What parameters are included in each signal alert?</span></span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed">
+                        <p data-i18n="faq2A">Every signal includes the precise asset pair (XAUUSD), direction (Buy/Sell), exact Entry Price, multiple Take Profit (TP) targets, and a well-defined Stop Loss (SL) for risk management.</p>
+                    </div>
                 </div>
 
                 <!-- FAQ Item 3 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
-                    <h3 data-i18n="faq3Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-question text-gold"></i> Do I need to create an account or register?
-                    </h3>
-                    <p data-i18n="faq3A" class="text-gray-400 pl-7 leading-relaxed">
-                        No registration or personal account is required to use our apps. Simply download the application directly from the Google Play Store and start receiving real-time notifications immediately.
-                    </p>
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-bold text-white flex items-center justify-between focus:outline-none hover:text-gold transition" onclick="toggleAccordion(this)">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-question text-gold"></i> <span data-i18n="faq3Q">Do I need to create an account or register?</span></span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed">
+                        <p data-i18n="faq3A">No registration or personal account is required to use our apps. Simply download the application directly from the Google Play Store and start receiving real-time notifications immediately.</p>
+                    </div>
                 </div>
 
                 <!-- FAQ Item 4 -->
-                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6">
-                    <h3 data-i18n="faq4Q" class="text-lg font-bold text-white mb-2 flex items-center gap-3">
-                        <i class="fa-solid fa-circle-question text-gold"></i> Are the apps free to download?
-                    </h3>
-                    <p data-i18n="faq4A" class="text-gray-400 pl-7 leading-relaxed">
-                        Yes, all apps developed by NS1 Apps are available for free download on the Google Play Store, supported by non-intrusive AdMob advertising and secure Firebase telemetry.
-                    </p>
+                <div class="bg-obsidian-card border border-obsidian-border rounded-2xl overflow-hidden">
+                    <button class="w-full p-6 text-left font-bold text-white flex items-center justify-between focus:outline-none hover:text-gold transition" onclick="toggleAccordion(this)">
+                        <span class="flex items-center gap-3"><i class="fa-solid fa-circle-question text-gold"></i> <span data-i18n="faq4Q">Are the apps free to download?</span></span>
+                        <i class="fa-solid fa-chevron-down transition-transform duration-300"></i>
+                    </button>
+                    <div class="hidden px-6 pb-6 text-gray-400 leading-relaxed">
+                        <p data-i18n="faq4A">Yes, all apps developed by NS1 Apps are available for free download on the Google Play Store, supported by non-intrusive AdMob advertising and secure Firebase telemetry.</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -462,7 +496,7 @@
                     </p>
                 </div>
                 <div>
-                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" data-i18n="storeBtn" class="bg-gold hover:bg-gold-light text-obsidian font-black px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 flex items-center gap-3 text-lg whitespace-nowrap">
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" rel="noopener noreferrer" data-i18n="storeBtn" class="bg-gold hover:bg-gold-light text-obsidian font-black px-8 py-4 rounded-2xl transition shadow-xl shadow-gold/20 flex items-center gap-3 text-lg whitespace-nowrap">
                         <i class="fa-brands fa-google-play text-2xl"></i> Visit NS1 Developer Store
                     </a>
                 </div>
@@ -470,43 +504,46 @@
         </div>
     </section>
 
-    <!-- SEO Apps & Keywords Index (Optimized for Search Engine Crawlers) -->
-    <section class="py-12 bg-obsidian border-t border-obsidian-border text-xs text-gray-400">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-4">
-            <h4 class="text-gray-300 font-bold uppercase tracking-wider text-sm mb-2">Live XAUUSD Signals & Gold Trading Portfolio (NS1 Apps)</h4>
-            <p class="leading-relaxed">
-                XAUUSD signals, Gold signals, Gold trading signals, XAUUSD trading, Gold trading, XAUUSD buy sell signals, Forex signals, Gold buy sell, Gold market analysis, XAUUSD alerts, Gold price alerts, Trading signals, Forex trading signals, Gold scalping, XAUUSD scalping, Gold day trading, Gold technical analysis, Live gold signals, Gold entry signals, Gold stop loss, Gold take profit, XAUUSD strategy, Forex market analysis, Gold trading alerts, Gold signal app, MT5 gold signals, MT4 gold signals, Ouro sinais, Sinais de ouro, Sinais XAUUSD, Sinais Forex, Trade ouro, Análise XAUUSD. Developed by devns1 (Contact: dl02071988@icloud.com / dl02071988@gmail.com).
-            </p>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- Footer with Financial Risk Disclaimer & Visitor Counter -->
     <footer class="bg-obsidian border-t border-obsidian-border py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center space-x-3">
-                <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-obsidian font-black text-lg">
-                    NS1
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+            <!-- Financial Risk Disclaimer (Google Play Compliance) -->
+            <div class="bg-obsidian-card border border-obsidian-border rounded-2xl p-6 text-xs text-gray-400 leading-relaxed">
+                <p class="font-bold text-gray-300 mb-1 flex items-center gap-2">
+                    <i class="fa-solid fa-triangle-exclamation text-gold"></i> <span data-i18n="disclaimerTitle">Risk Disclaimer & Financial Notice:</span>
+                </p>
+                <p data-i18n="disclaimerText">
+                    Trading financial markets, gold (XAUUSD), and forex carries a high level of risk and may not be suitable for all investors. The signals and market analyses provided by NS1 Apps and Xau Pro are strictly for informational and educational purposes only and do not constitute financial or investment advice. Past performance is not indicative of future results. Always evaluate your risk tolerance before executing any trade.
+                </p>
+            </div>
+
+            <div class="flex flex-col md:flex-row items-center justify-between gap-6 pt-4 border-t border-obsidian-border/50">
+                <div class="flex items-center space-x-3">
+                    <div class="w-8 h-8 rounded-lg bg-gold flex items-center justify-center text-obsidian font-black text-lg">
+                        NS1
+                    </div>
+                    <span class="text-lg font-bold text-white">NS1 <span class="text-gold">APPS</span></span>
                 </div>
-                <span class="text-lg font-bold text-white">NS1 <span class="text-gold">APPS</span></span>
-            </div>
 
-            <div class="flex items-center space-x-2 text-xs text-gray-300 bg-obsidian-card border border-obsidian-border px-3 py-2 rounded-xl shadow-inner">
-                <div align=center><a href='https://contador.s12.com.br'><img src='https://contador.s12.com.br/img-xW9c6wa9846w6Zw3-2.gif' border='0' alt='contador free'></a><script type='text/javascript' src='https://contador.s12.com.br/ad.js?id=xW9c6wa9846w6Zw3'></script></div>
-            </div>
+                <!-- Visitor Counter Badge -->
+                <div class="flex items-center space-x-2 text-xs text-gray-300 bg-obsidian-card border border-obsidian-border px-3 py-2 rounded-xl shadow-inner">
+                    <div align="center"><a href="https://contador.s12.com.br" target="_blank" rel="noopener noreferrer"><img src="https://contador.s12.com.br/img-xW9c6wa9846w6Zw3-2.gif" border="0" alt="contador free"></a><script type="text/javascript" src="https://contador.s12.com.br/ad.js?id=xW9c6wa9846w6Zw3"></script></div>
+                </div>
 
-            <p class="text-gray-500 text-sm text-center">
-                &copy; 2026 NS1 Apps. <span data-i18n="rights">All rights reserved. Hosted on</span> <a href="https://devns1.github.io/" class="text-gold hover:underline">devns1.github.io</a>
-            </p>
-            <div class="flex items-center space-x-6">
-                <a href="privacy.html" data-i18n="navPrivacy" class="text-gray-400 hover:text-gold transition text-sm">Privacy</a>
-                <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" class="text-gray-400 hover:text-gold transition text-xl" title="Google Play Store">
-                    <i class="fa-brands fa-google-play"></i>
-                </a>
+                <p class="text-gray-500 text-sm text-center">
+                    &copy; 2026 NS1 Apps. <span data-i18n="rights">All rights reserved. Hosted on</span> <a href="https://devns1.github.io/" class="text-gold hover:underline">devns1.github.io</a>
+                </p>
+                <div class="flex items-center space-x-6">
+                    <a href="privacy.html" data-i18n="navPrivacy" class="text-gray-400 hover:text-gold transition text-sm">Privacy</a>
+                    <a href="https://play.google.com/store/apps/dev?id=6731193948053824603" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-gold transition text-xl" title="Google Play Store">
+                        <i class="fa-brands fa-google-play"></i>
+                    </a>
+                </div>
             </div>
         </div>
     </footer>
 
-    <!-- Multilingual & Visitor Counter Script -->
+    <!-- Multilingual & Interactive Script -->
     <script>
         const translations = {
             en: {
@@ -564,7 +601,8 @@
                 storeTitle: "Explore All NS1 Apps",
                 storeSub: "Visit our official developer profile on the Google Play Store to explore our complete suite of trading signals, financial analyzers, and network utilities.",
                 storeBtn: "Visit NS1 Developer Store",
-                visitorCount: "Visitors:",
+                disclaimerTitle: "Risk Disclaimer & Financial Notice:",
+                disclaimerText: "Trading financial markets, gold (XAUUSD), and forex carries a high level of risk and may not be suitable for all investors. The signals and market analyses provided by NS1 Apps and Xau Pro are strictly for informational and educational purposes only and do not constitute financial or investment advice. Past performance is not indicative of future results. Always evaluate your risk tolerance before executing any trade.",
                 rights: "All rights reserved. Hosted on"
             },
             pt: {
@@ -622,7 +660,8 @@
                 storeTitle: "Explore Todos os Apps da NS1",
                 storeSub: "Visite nossa página oficial de desenvolvedor na Google Play Store para explorar nossa suíte completa de sinais de trading e utilitários.",
                 storeBtn: "Visitar Loja NS1",
-                visitorCount: "Visitantes:",
+                disclaimerTitle: "Aviso de Risco e Aviso Financeiro:",
+                disclaimerText: "Negociar nos mercados financeiros, ouro (XAUUSD) e forex carrega um alto nível de risco e pode não ser adequado para todos os investidores. Os sinais e análises de mercado fornecidos pela NS1 Apps e Xau Pro são estritamente para fins informativos e educacionais e não constituem aconselhamento financeiro ou de investimento. O desempenho passado não é indicativo de resultados futuros. Sempre avalie sua tolerância ao risco antes de executar qualquer operação.",
                 rights: "Todos os direitos reservados. Hospedado em"
             },
             es: {
@@ -680,7 +719,8 @@
                 storeTitle: "Explora Todas las Apps de NS1",
                 storeSub: "Visita nuestra página oficial de desarrollador en Google Play Store.",
                 storeBtn: "Visitar Tienda NS1",
-                visitorCount: "Visitantes:",
+                disclaimerTitle: "Aviso de Riesgo y Aviso Financiero:",
+                disclaimerText: "Operar en los mercados financieros, oro (XAUUSD) y forex conlleva un alto nivel de riesgo y puede no ser adecuado para todos los inversores. Las señales y análisis de mercado proporcionados por NS1 Apps y Xau Pro son estrictamente para fines informativos y educativos y no constituyen asesoramiento financiero o de inversión. El rendimiento pasado no es indicativo de resultados futuros. Evalúe siempre su tolerancia al riesgo antes de ejecutar cualquier operación.",
                 rights: "Todos los derechos reservados. Alojado en"
             },
             fr: {
@@ -738,7 +778,8 @@
                 storeTitle: "Explorez Toutes les Apps NS1",
                 storeSub: "Visitez notre page de développeur officielle sur le Google Play Store.",
                 storeBtn: "Visiter la Boutique NS1",
-                visitorCount: "Visiteurs :",
+                disclaimerTitle: "Avis de Risque et Notice Financière :",
+                disclaimerText: "Le trading sur les marchés financiers, l'or (XAUUSD) et le forex comporte un niveau de risque élevé et peut ne pas convenir à tous les investisseurs. Les signaux et analyses de marché fournis par NS1 Apps et Xau Pro sont strictement fournis à des fins d'information et d'éducation uniquement et ne constituent pas un conseil financier ou d'investissement. Les performances passées ne préjugent pas des résultats futurs. Évaluez toujours votre tolérance au risque avant d'exécuter une transaction.",
                 rights: "Tous droits réservés. Hébergé sur"
             }
         };
@@ -764,24 +805,39 @@
             });
         }
 
+        // Mobile Menu Toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // FAQ Accordion Toggle
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('.fa-chevron-down');
+            content.classList.toggle('hidden');
+            icon.classList.toggle('rotate-180');
+        }
+
+        // Gallery Lightbox Modal
+        function openLightbox(imgSrc) {
+            const modal = document.getElementById('lightbox-modal');
+            const modalImg = document.getElementById('lightbox-img');
+            modalImg.src = imgSrc;
+            modal.classList.remove('hidden');
+        }
+
+        function closeLightbox() {
+            const modal = document.getElementById('lightbox-modal');
+            modal.classList.add('hidden');
+        }
+
         // On load, default to English or saved preference
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred_lang') || 'en';
             setLanguage(savedLang);
-
-            // Instant increment visitor counter for testing & live viewing
-            let visits = localStorage.getItem('ns1_site_visits');
-            if (!visits) {
-                visits = 1482;
-            } else {
-                visits = parseInt(visits) + 1;
-            }
-            localStorage.setItem('ns1_site_visits', visits);
-
-            const counterEl = document.getElementById('visitor-count');
-            if (counterEl) {
-                counterEl.textContent = Number(visits).toLocaleString();
-            }
         });
     </script>
 </body>
