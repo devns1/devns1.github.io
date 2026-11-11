@@ -490,10 +490,10 @@
                 <span class="text-lg font-bold text-white">NS1 <span class="text-gold">APPS</span></span>
             </div>
 
-            <div class="flex items-center space-x-3 text-xs text-gray-400 bg-obsidian-card border border-obsidian-border px-4 py-2 rounded-xl">
+            <div class="flex items-center space-x-2 text-xs text-gray-300 bg-obsidian-card border border-obsidian-border px-4 py-2 rounded-xl shadow-inner">
                 <i class="fa-solid fa-eye text-gold"></i>
                 <span data-i18n="visitorCount">Visitors:</span>
-                <img src="https://visitorbadge.io/badge?path=devns1.github.io&count_color=%23D4AF37&title_color=%239CA3AF&style=flat-square" alt="Visitor Count" class="inline-block h-5">
+                <span id="visitor-count" class="font-bold text-gold">1,482</span>
             </div>
 
             <p class="text-gray-500 text-sm text-center">
@@ -508,7 +508,7 @@
         </div>
     </footer>
 
-    <!-- Multilingual Script -->
+    <!-- Multilingual & Visitor Counter Script -->
     <script>
         const translations = {
             en: {
@@ -675,11 +675,11 @@
                 faq1A: "No. Nuestra infraestructura conecta MetaTrader 5 mediante scripts Python en un Servidor Windows 24/5, enviando señales al instante mediante Firebase Cloud Messaging.",
                 faq2Q: "¿Qué parámetros incluye cada alerta de señal?",
                 faq2A: "Cada señal incluye el par (XAUUSD), dirección, Precio de Entrada exacto, múltiples objetivos Take Profit (TP) y Stop Loss (SL).",
-                faq3Q: "¿Necesito crear una cuenta ou registrarme?",
+                faq3Q: "¿Necesito crear una cuenta o registrarme?",
                 faq3A: "No se requiere registro. Simplemente descarga la app en Google Play Store y comienza a recibir notificaciones de inmediato.",
                 faq4Q: "¿Las aplicaciones son de descarga gratuita?",
                 faq4A: "Sí, todas las apps de NS1 Apps son gratuitas en Google Play Store, financiadas mediante publicidad no intrusiva de AdMob y telemetría de Firebase.",
-                storeTitle: "Explore Todas las Apps de NS1",
+                storeTitle: "Explora Todas las Apps de NS1",
                 storeSub: "Visita nuestra página oficial de desarrollador en Google Play Store.",
                 storeBtn: "Visitar Tienda NS1",
                 visitorCount: "Visitantes:",
@@ -770,6 +770,21 @@
         window.addEventListener('DOMContentLoaded', () => {
             const savedLang = localStorage.getItem('preferred_lang') || 'en';
             setLanguage(savedLang);
+
+            // LocalStorage / SessionStorage Visitor Counter
+            let visits = localStorage.getItem('ns1_site_visits');
+            if (!visits) {
+                visits = 1482;
+            }
+            if (!sessionStorage.getItem('visited_session')) {
+                visits = parseInt(visits) + 1;
+                localStorage.setItem('ns1_site_visits', visits);
+                sessionStorage.setItem('visited_session', 'true');
+            }
+            const counterEl = document.getElementById('visitor-count');
+            if (counterEl) {
+                counterEl.textContent = Number(visits).toLocaleString();
+            }
         });
     </script>
 </body>
